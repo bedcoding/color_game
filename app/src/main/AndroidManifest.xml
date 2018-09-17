@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.jeux.ggavi">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/appicon"
+        android:supportsRtl="true"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+        android:theme="@style/FullScreen">
+        <activity android:name="io.jeux.ggavi.NUM0_Start_Game_Menu">
+
+        </activity>
+        <activity android:name="io.jeux.ggavi.NUM1_Diary_Msg" />
+        <activity android:name="io.jeux.ggavi.NUM2_Game_Main_Page" />
+        <activity android:name="io.jeux.ggavi.NUM3_Get_Item_Menu" />
+        <activity android:name="io.jeux.ggavi.NUM4_Run_And_Find" />
+        <activity android:name="io.jeux.ggavi.Splash_Screen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

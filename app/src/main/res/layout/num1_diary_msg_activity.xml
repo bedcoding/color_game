@@ -1,0 +1,71 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="io.jeux.ggavi.NUM3_Get_Item_Menu"
+    android:background="#333333"
+    android:weightSum="5"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1.5"
+        >
+        <TextView
+            android:id="@+id/Day_No_View_Id"
+            android:layout_width="155dp"
+            android:layout_height="170dp"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            android:text="Day 1"
+            android:gravity="center"
+            android:background="@drawable/day_background"
+            android:paddingBottom="10dp"
+            android:paddingStart="10dp"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:gravity="center"
+     >
+        <TextView
+            android:id="@+id/Diary_View_Id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="#f86d06"
+            android:fontFamily="sans-serif-condensed"
+            android:textAlignment="center"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="end|center_vertical"
+        android:layout_weight="1"
+        >
+        <Button
+            android:id="@+id/Next_Button_Id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next >"
+            android:background="@drawable/button_back_rect"
+            android:textColor="#fff"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_marginEnd="20dp"
+            android:textAllCaps="false"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:gravity="center"
+            />
+    </LinearLayout>
+
+</LinearLayout>

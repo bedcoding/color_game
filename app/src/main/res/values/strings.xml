@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">Life Save Padwa</string>
+    <string-array name="Diary_Messages">
+        <item> 어느날 북한이 서울을 향해 핵을 날렸다. 부산외대 노마드 워크숍에 참가하기 위해 수도를 떠났던 사람들은 간신히 폭격지점에서 벗어날 수 있었지만, 국제구호단체에서 투하한 식량을 찾기 위해 끊임없이 걷기를 해야만 했다. </item>
+        <item> 우리는 갈수록 강해지는 방사능 낙진을 피해 계속해서 남하해야만 했다. 걷기를 계속하다보면 간간히 구호단체에서 투하하는 식량을 모을 수 있겠지만, 쓸만한 재료는 이미 다른 누군가에 의해 점거된 상황이었다. </item>
+        <item> 우리는 걷기를 계속했고, 구호단체에서 살포한 식량은 물물교환을 통해 재료로 교환해야만 했다. 그러나 방사능 낙진은 우리가 걷는 속도보다 더 빠른 속도로 다가오고 있었다. </item>
+        <item>Day 3 Note</item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
+        <!-- Add 100 Diary Message  Here -->
+
+    </string-array>
+    <integer-array name="Images_Data">
+        <item>@drawable/bufs</item>
+        <item>@drawable/walk</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/walk</item>
+        <item>@drawable/walk</item>
+        <item>@drawable/walk</item>
+        <item>@drawable/walk</item>
+        <item>@drawable/walk</item>
+        <item>@drawable/walk</item>
+        <item>@drawable/walk</item>
+        <item>@drawable/walk</item>
+        <item>@drawable/walk</item>
+        <item>@drawable/walk</item>
+
+        <!-- Add 100 Images Ids Here -->
+    </integer-array>
+    <string-array name="Image_Description">
+        <item> 걷기를 통해 얻은 식량과 물은 자원과 교환할 수 있습니다. </item>
+        <item> 걷기를 통해 얻은 식량과 물은 자원과 교환할 수 있습니다. </item>
+        <item> 걷기를 통해 얻은 식량과 물은 자원과 교환할 수 있습니다. </item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 3 Note</item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 3 Note</item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 3 Note</item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 3 Note</item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
+        <!-- Add 100 Image Description  Here -->
+
+    </string-array>
+
+</resources>

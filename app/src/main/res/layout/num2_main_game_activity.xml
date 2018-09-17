@@ -1,0 +1,606 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="io.jeux.ggavi.NUM2_Game_Main_Page"
+    android:background="#333333"
+    android:weightSum="4"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:background="@drawable/top_bar_back"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:text="생존자 상태"
+            android:textColor="#ffffff"
+            android:textSize="22sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        android:layout_marginTop="5dp"
+        >
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/diet"
+            android:padding="5dp"
+
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Food :"
+            android:layout_weight="1"
+            android:textColor="#fff"
+            android:gravity="start|center"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:id="@+id/Food_Amount_View_ID"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="1"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:gravity="start|center"
+            />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/water"
+            android:padding="5dp"
+
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Water:"
+            android:layout_weight="1"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:gravity="start|center"
+
+            />
+        <TextView
+            android:id="@+id/Water_Amount_View_Id"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="1"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:gravity="start|center"
+            />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/radiation"
+            android:padding="5dp"
+            android:layout_marginStart="15dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="현재 방사능 데미지: "
+                android:textColor="#fabe29"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/Damage_Amount_View_Id"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="1"
+                android:textColor="#fabe29"
+                android:textSize="18sp"
+                android:gravity="start|center"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+    android:background="#fabe29"
+    />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.25"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        >
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:background="@drawable/top_bar_back"
+            android:gravity="center"
+            android:text="생존자1"
+            android:textColor="#fabe29" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:baselineAligned="false">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginEnd="10dp"
+
+            >
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/damage"
+                android:padding="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="현재 피해량: "
+                android:textColor="#fabe29"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/Family_One_Damage_View_Id"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="1"
+                android:textColor="#fabe29"
+                android:textSize="18sp"
+                android:gravity="start|center"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginEnd="10dp"
+
+            >
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/thirst"
+                android:padding="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="목마름: "
+                android:textColor="#fabe29"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/Family_One_Thirst_View_Id"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="100"
+                android:textColor="#fabe29"
+                android:textSize="18sp"
+                android:gravity="start|center"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginEnd="10dp"
+
+            >
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/hunger"
+                android:padding="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="배고픔: "
+                android:textColor="#fabe29"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/Family_One_Hungry_View_Id"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="100"
+                android:textColor="#fabe29"
+                android:textSize="18sp"
+                android:gravity="center"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginEnd="10dp"
+
+            >
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/hp"
+                android:padding="5dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="   Hp    : "
+                android:textColor="#fabe29"
+                android:textSize="18sp"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/Family_One_Hp_View_Id"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="100"
+                android:textColor="#fabe29"
+                android:textSize="18sp"
+                android:gravity="center"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="10dp"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                >
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_back_press"
+                    android:text="Food"
+                    android:textColor="#fff"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:id="@+id/Family_One_Food_Button_Id"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                >
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_back_press"
+                    android:text="Water"
+                    android:textColor="#fff"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:id="@+id/Family_One_Water_Button_Id"
+
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.25"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="5dp"
+        >
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:background="@drawable/top_bar_back"
+            android:gravity="center"
+            android:text="생존자2"
+            android:textColor="#fabe29" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:baselineAligned="false">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="10dp"
+
+                    >
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/damage"
+                        android:padding="5dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="현재 피해량 : "
+                        android:textColor="#fabe29"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/Family_Two_Damage_View_Id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="1"
+                        android:textColor="#fabe29"
+                        android:textSize="18sp"
+                        android:gravity="start|center"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="10dp"
+
+                    >
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/thirst"
+                        android:padding="5dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="목마름 : "
+                        android:textColor="#fabe29"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/Family_Two_Thirst_View_Id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="100"
+                        android:textColor="#fabe29"
+                        android:textSize="18sp"
+                        android:gravity="start|center"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="10dp"
+
+                    >
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/hunger"
+                        android:padding="5dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="배고픔 : "
+                        android:textColor="#fabe29"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/Family_Two_Hungry_View_Id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="100"
+                        android:textColor="#fabe29"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="10dp"
+
+                    >
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/hp"
+                        android:padding="5dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="   Hp    : "
+                        android:textColor="#fabe29"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        />
+                    <TextView
+                        android:id="@+id/Family_Two_Hp_View_Id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="100"
+                        android:textColor="#fabe29"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="10dp"
+            android:baselineAligned="false">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                >
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_back_press"
+                    android:text="Food"
+                    android:textColor="#fff"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:id="@+id/Family_Two_Food_Button_Id"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                >
+                <Button
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_back_press"
+                    android:text="Water"
+                    android:textColor="#fff"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:id="@+id/Family_Two_Water_Button_Id"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="0.5"
+        >
+
+        <Button
+            android:id="@+id/Item_List_Button_Id"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="Item List"
+            android:textAllCaps="false"
+            android:background="@drawable/top_bar_back"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:layout_margin="20dp"
+            />
+        <Button
+            android:id="@+id/Start_Running_Button_Id"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:text="Start Running"
+            android:textAllCaps="false"
+            android:background="@drawable/top_bar_back"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:layout_margin="20dp"
+            />
+    </LinearLayout>
+</LinearLayout>
