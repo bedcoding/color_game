@@ -1,9 +1,12 @@
 package io.jeux.ggavi;
 
-
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
@@ -14,7 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-public class NUM4_Run_And_Find extends AppCompatActivity {
+public class NUM4_Run_And_Find extends AppCompatActivity implements SensorEventListener {
 
 
     private int Collected_Food,Collected_Water;
@@ -28,10 +31,22 @@ public class NUM4_Run_And_Find extends AppCompatActivity {
 
 
     // 만보기 변수선언 투척
+    private long lastTime;
+    private float speed;
+    private float lastX;
+    private float lastY;
+    private float lastZ;
+    private float x, y, z;
 
+    private static final int SHAKE_THRESHOLD = 800;
+    private static final int DATA_X = SensorManager.DATA_X;
+    private static final int DATA_Y = SensorManager.DATA_Y;
+    private static final int DATA_Z = SensorManager.DATA_Z;
 
+    private SensorManager sensorManager;
+    private Sensor accelerormeterSensor;
 
-    ///////////////////////
+    //////////////////////////////////////////////////////
 
 
 
@@ -46,7 +61,92 @@ public class NUM4_Run_And_Find extends AppCompatActivity {
         Image_Setting();
         Initiating_Views();
 
+
+
+
+
+        // 만보기 기능 투척
+        sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
+        accelerormeterSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+
+        Steps_View = (TextView) findViewById(R.id.Steps_Taken_View_Id);
+        Steps_View.setText("" + Temp_Step_Taken);
+        /////////////////////////
     }
+
+
+
+
+
+
+
+    // 만보기 함수 투척
+
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        if (accelerormeterSensor != null)
+            sensorManager.registerListener(this, accelerormeterSensor,
+                    SensorManager.SENSOR_DELAY_GAME);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (sensorManager != null)
+            sensorManager.unregisterListener(this);
+    }
+
+    @Override
+    public void onSensorChanged(SensorEvent event) {
+        if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+            long currentTime = System.currentTimeMillis();
+            long gabOfTime = (currentTime - lastTime);
+            if (gabOfTime > 120) {
+                lastTime = currentTime;
+                x = event.values[SensorManager.DATA_X];
+                y = event.values[SensorManager.DATA_Y];
+                z = event.values[SensorManager.DATA_Z];
+
+                speed = Math.abs(x + y + z - lastX - lastY - lastZ) / gabOfTime * 10000;
+
+                if (speed > SHAKE_THRESHOLD) {
+                    Temp_Step_Taken++;
+
+                    if(Temp_Step_Taken%100==0)
+                    {
+                        Collected_Food=Collected_Food+2;
+                        Collected_Water++;
+
+                    }else
+                    {
+                        Collected_Food=0;
+                        Collected_Water=0;
+                    }
+                    Put_And_Update();
+                }
+
+                lastX = event.values[DATA_X];
+                lastY = event.values[DATA_Y];
+                lastZ = event.values[DATA_Z];
+            }
+        }
+    }
+
+    @Override
+    public void onAccuracyChanged(Sensor sensor, int accuracy)
+    {
+
+    }
+
+    // ↑ 여기까지가 만보기 관련 함수
+    /////////////////////////////////////////////////////////////////////
+
+
+
+
+
 
     private void Initiating_Views()
     {
@@ -96,11 +196,8 @@ public class NUM4_Run_And_Find extends AppCompatActivity {
                 editor.commit();
                 startActivity(new Intent(NUM4_Run_And_Find.this,NUM1_Diary_Msg.class));
                 finish();
-
-
             }
         });
-
     }
 
 

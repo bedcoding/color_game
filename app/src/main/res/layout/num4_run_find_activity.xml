@@ -12,10 +12,10 @@
     >
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="0dp"
+    android:layout_height="170dp"
     android:orientation="vertical"
-    android:layout_weight="1.75"
     >
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"
@@ -35,21 +35,12 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
         android:orientation="vertical"
         android:gravity="center_horizontal"
         android:padding="5dp"
-        android:layout_marginTop="10dp"
-        >
-        <TextView
-            android:layout_width="130dp"
-            android:layout_height="40dp"
-            android:text="Statistic"
-            android:textColor="#fabe29"
-            android:background="@drawable/top_bar_back"
-            android:gravity="center"
-            android:textSize="19sp"
-            />
+        android:layout_marginTop="10dp">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -203,7 +194,10 @@
             </LinearLayout>
         </LinearLayout>
 
+
+        <!-- 테스트용 버튼으로, 현재 gone으로 숨겨둠 -->
         <Button
+            android:visibility="gone"
             android:id="@+id/Run_Button_Id"
             android:layout_width="160dp"
             android:layout_height="50dp"
@@ -213,17 +207,20 @@
             android:textAllCaps="false"
             android:textColor="#fff"
             android:textSize="18sp" />
+
+
     </LinearLayout>
 </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="350dp"
         android:orientation="vertical"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
         android:layout_weight="1.25"
         >
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="150dp"
@@ -248,9 +245,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_weight="0.5"
         >
         <Button
             android:id="@+id/Stop_walk_Button_Id"

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="io.jeux.ggavi.NUM2_Game_Main_Page"
-    android:background="#333333"
+    android:background="#E0FFFF"
     android:weightSum="4"
     >
 
@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             android:fontFamily="sans-serif-condensed"
             android:gravity="center"
-            android:text="생존자 상태"
+            android:text="현재 상태"
             android:textColor="#ffffff"
             android:textSize="22sp" />
     </LinearLayout>
@@ -53,7 +53,7 @@
             android:layout_height="match_parent"
             android:text="Food :"
             android:layout_weight="1"
-            android:textColor="#fff"
+            android:textColor="#00BFFF"
             android:gravity="start|center"
             android:textSize="18sp"
             />
@@ -62,7 +62,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="1"
-            android:textColor="#fff"
+            android:textColor="#00BFFF"
             android:textSize="18sp"
             android:layout_weight="1"
             android:gravity="start|center"
@@ -81,7 +81,7 @@
             android:layout_height="match_parent"
             android:text="Water:"
             android:layout_weight="1"
-            android:textColor="#fff"
+            android:textColor="#00BFFF"
             android:textSize="18sp"
             android:gravity="start|center"
 
@@ -91,7 +91,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="1"
-            android:textColor="#fff"
+            android:textColor="#00BFFF"
             android:textSize="18sp"
             android:layout_weight="1"
             android:gravity="start|center"
@@ -105,9 +105,9 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/radiation"
+            android:src="@drawable/sslogo2"
             android:padding="5dp"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="50dp"
             />
         <LinearLayout
             android:layout_width="match_parent"
@@ -121,15 +121,15 @@
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
-                android:text="현재 방사능 데미지: "
-                android:textColor="#fabe29"
+                android:text="   체력 감소량: "
+                android:textColor="#00BFFF"
                 android:textSize="18sp" />
             <TextView
                 android:id="@+id/Damage_Amount_View_Id"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="1"
-                android:textColor="#fabe29"
+                android:textColor="#00BFFF"
                 android:textSize="18sp"
                 android:gravity="start|center"
                 />
@@ -138,8 +138,8 @@
 
 <View
     android:layout_width="match_parent"
-    android:layout_height="0.5dp"
-    android:background="#fabe29"
+    android:layout_height="1.0dp"
+    android:background="#00BFFF"
     />
     </LinearLayout>
     <LinearLayout
@@ -152,11 +152,11 @@
         >
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="match_parent"
             android:layout_height="35dp"
             android:background="@drawable/top_bar_back"
             android:gravity="center"
-            android:text="생존자1"
+            android:text="관광객1"
             android:textColor="#fabe29" />
 
         <LinearLayout
@@ -172,14 +172,15 @@
         android:orientation="vertical"
         android:layout_marginTop="5dp"
         >
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:gravity="center"
             android:orientation="horizontal"
             android:layout_marginEnd="10dp"
-
             >
+
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
@@ -191,9 +192,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="현재 피해량: "
+                android:text="체력 감소량: "
                 android:textColor="#fabe29"
                 android:textSize="18sp" />
+
             <TextView
                 android:id="@+id/Family_One_Damage_View_Id"
                 android:layout_width="wrap_content"
@@ -369,11 +371,11 @@
         >
 
         <TextView
-            android:layout_width="120dp"
+            android:layout_width="match_parent"
             android:layout_height="35dp"
             android:background="@drawable/top_bar_back"
             android:gravity="center"
-            android:text="생존자2"
+            android:text="관광객2"
             android:textColor="#fabe29" />
 
         <LinearLayout
@@ -408,7 +410,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="현재 피해량 : "
+                        android:text="체력 감소량 : "
                         android:textColor="#fabe29"
                         android:textSize="18sp" />
                     <TextView

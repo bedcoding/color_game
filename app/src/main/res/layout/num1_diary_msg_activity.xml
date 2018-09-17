@@ -16,15 +16,15 @@
         >
         <TextView
             android:id="@+id/Day_No_View_Id"
-            android:layout_width="155dp"
-            android:layout_height="170dp"
-            android:textColor="#ffffff"
+            android:layout_width="175dp"
+            android:layout_height="175dp"
+            android:textColor="#333333"
             android:textSize="30sp"
             android:text="Day 1"
             android:gravity="center"
-            android:background="@drawable/day_background"
-            android:paddingBottom="10dp"
-            android:paddingStart="10dp"
+            android:background="@drawable/sslogo"
+            android:paddingBottom="5dp"
+            android:paddingStart="5dp"
 
             />
     </LinearLayout>
@@ -32,16 +32,17 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2.5"
-        android:gravity="center"
-     >
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:gravity="center">
         <TextView
             android:id="@+id/Diary_View_Id"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:textSize="25sp"
             android:textColor="#f86d06"
             android:fontFamily="sans-serif-condensed"
-            android:textAlignment="center"
             />
     </LinearLayout>
 

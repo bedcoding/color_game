@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Life Save Padwa</string>
     <string-array name="Diary_Messages">
-        <item> 어느날 북한이 서울을 향해 핵을 날렸다. 부산외대 노마드 워크숍에 참가하기 위해 수도를 떠났던 사람들은 간신히 폭격지점에서 벗어날 수 있었지만, 국제구호단체에서 투하한 식량을 찾기 위해 끊임없이 걷기를 해야만 했다. </item>
+        <item> 1. 어느날 지구를 지나던 꼬마 마법사 레나와 루미는 마력 부족으로 인해 우주선이 추락하여 서울시에 불시착하게 되고, 마력을 보충하기 위해 걷기 시작합니다. </item>
         <item> 우리는 갈수록 강해지는 방사능 낙진을 피해 계속해서 남하해야만 했다. 걷기를 계속하다보면 간간히 구호단체에서 투하하는 식량을 모을 수 있겠지만, 쓸만한 재료는 이미 다른 누군가에 의해 점거된 상황이었다. </item>
         <item> 우리는 걷기를 계속했고, 구호단체에서 살포한 식량은 물물교환을 통해 재료로 교환해야만 했다. 그러나 방사능 낙진은 우리가 걷는 속도보다 더 빠른 속도로 다가오고 있었다. </item>
         <item>Day 3 Note</item>
@@ -27,7 +27,7 @@
 
     </string-array>
     <integer-array name="Images_Data">
-        <item>@drawable/bufs</item>
+        <item>@drawable/n1gangnam</item>
         <item>@drawable/walk</item>
         <item>@drawable/bufs</item>
         <item>@drawable/walk</item>
@@ -44,7 +44,7 @@
         <!-- Add 100 Images Ids Here -->
     </integer-array>
     <string-array name="Image_Description">
-        <item> 걷기를 통해 얻은 식량과 물은 자원과 교환할 수 있습니다. </item>
+        <item> 조선의 문물과 제도를 완성한 성종과 그의 비 정현왕후의 묘인 선릉, 왕도정치를 실현하고자 노력한 중종의 묘인 정릉을 돌아보며 조선 왕조의 역사와 세계문화유산으로 등재된 조선왕릉에 대해 배우고, 조선 시대 대표적인 사찰 봉은사에서 문정왕후와 보우스님, 서산대사 휴정, 추사 김정희 등 여러 역사적 인물의 발자취를 느낄 수 있는 코스이다. </item>
         <item> 걷기를 통해 얻은 식량과 물은 자원과 교환할 수 있습니다. </item>
         <item> 걷기를 통해 얻은 식량과 물은 자원과 교환할 수 있습니다. </item>
         <item>Day 4 Note</item>
