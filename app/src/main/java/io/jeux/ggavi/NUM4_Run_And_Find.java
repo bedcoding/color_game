@@ -29,7 +29,7 @@ public class NUM4_Run_And_Find extends AppCompatActivity {
 
     // 만보기 변수선언 투척
 
-    
+
 
     ///////////////////////
 
