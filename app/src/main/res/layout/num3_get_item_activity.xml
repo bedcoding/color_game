@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="io.jeux.ggavi.NUM3_Get_Item_Menu"
-    android:background="#333333"
+    android:background="#E0FFFF"
     android:weightSum="3"
     >
     <LinearLayout
@@ -53,7 +53,7 @@
                 android:layout_height="match_parent"
                 android:text="Food :"
                 android:layout_weight="1"
-                android:textColor="#fff"
+                android:textColor="#00BFFF"
                 android:gravity="start|center"
                 android:textSize="18sp"
                 />
@@ -62,7 +62,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="1"
-                android:textColor="#fff"
+                android:textColor="#00BFFF"
                 android:textSize="18sp"
                 android:layout_weight="1"
                 android:gravity="start|center"
@@ -81,7 +81,7 @@
                 android:layout_height="match_parent"
                 android:text="Water:"
                 android:layout_weight="1"
-                android:textColor="#fff"
+                android:textColor="#00BFFF"
                 android:textSize="18sp"
                 android:gravity="start|center"
 
@@ -91,7 +91,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="1"
-                android:textColor="#fff"
+                android:textColor="#00BFFF"
                 android:textSize="18sp"
                 android:layout_weight="1"
                 android:gravity="start|center"
@@ -105,9 +105,9 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/radiation"
+                android:src="@drawable/sslogo2"
                 android:padding="5dp"
-                android:layout_marginStart="15dp"
+                android:layout_marginStart="50dp"
                 />
             <LinearLayout
                 android:layout_width="match_parent"
@@ -121,25 +121,26 @@
                     android:layout_height="match_parent"
                     android:layout_centerHorizontal="true"
                     android:gravity="center"
-                    android:text="현재 방사능 수치:"
-                    android:textColor="#fabe29"
+                    android:text="   체력 감소량: "
+                    android:textColor="#00BFFF"
                     android:textSize="18sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="1"
-                    android:textColor="#fabe29"
+                    android:textColor="#00BFFF"
                     android:textSize="18sp"
                     android:gravity="start|center"
                     />
             </LinearLayout>
         </RelativeLayout>
-
+<!--
         <View
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:background="#fabe29"
+            android:layout_height="1.0dp"
+            android:background="#00BFFF"
             />
+-->
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -151,7 +152,7 @@
         >
 
         <TextView
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="35dp"
             android:background="@drawable/top_bar_back"
             android:gravity="center"
@@ -174,21 +175,21 @@
                 >
 
                 <ImageView
-                    android:layout_width="30dp"
+                    android:layout_width="50dp"
                     android:layout_height="30dp"
                     android:src="@drawable/diet"
                     android:padding="5dp"
                     />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="5dp"
-                    android:gravity="center"
-                    android:text="상품 가격 : 음식 10, 물 5"
+                    android:text="상품 가격 : [음식 10, 물 5]가 필요합니다"
                     android:textColor="#fabe29"
                     android:textSize="18sp" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
@@ -196,17 +197,16 @@
                 android:gravity="center"
                 >
                 <ImageView
-                    android:layout_width="30dp"
+                    android:layout_width="50dp"
                     android:layout_height="30dp"
                     android:src="@drawable/firewall"
                     />
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginStart="5dp"
-                    android:gravity="center"
-                    android:text="방사능 데미지 감소량 : 5"
+                    android:text="한국산 건강식품 : 체력 감소량을 5 줄여줌"
                     android:textColor="#fabe29"
                     android:textSize="18sp" />
             </LinearLayout>
@@ -242,7 +242,7 @@
         >
 
         <TextView
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="35dp"
             android:background="@drawable/top_bar_back"
             android:gravity="center"

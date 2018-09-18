@@ -38,7 +38,6 @@ public class NUM2_Game_Main_Page extends AppCompatActivity {
 //     Getting Data From Shared Preference For A New Or A Loaded Game
     private void Getting_Data()
     {
-
             Family_One_Hungry=Data_Box.getInt("Family_One_Hungry",100);
             Family_One_Thirst=Data_Box.getInt("Family_One_Thirst",100);
             Family_One_Hp=Data_Box.getInt("Family_One_Hp",100);

@@ -135,12 +135,13 @@
                 />
         </LinearLayout>
     </RelativeLayout>
-
+<!--
 <View
     android:layout_width="match_parent"
     android:layout_height="1.0dp"
     android:background="#00BFFF"
     />
+-->
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -582,7 +583,7 @@
 
         <Button
             android:id="@+id/Item_List_Button_Id"
-            android:layout_width="120dp"
+            android:layout_width="170dp"
             android:layout_height="40dp"
             android:text="Item List"
             android:textAllCaps="false"
@@ -590,11 +591,11 @@
             android:fontFamily="sans-serif-condensed"
             android:textColor="#fff"
             android:textSize="20dp"
-            android:layout_margin="20dp"
+            android:layout_margin="8dp"
             />
         <Button
             android:id="@+id/Start_Running_Button_Id"
-            android:layout_width="120dp"
+            android:layout_width="170dp"
             android:layout_height="40dp"
             android:text="Start Running"
             android:textAllCaps="false"
@@ -602,7 +603,7 @@
             android:fontFamily="sans-serif-condensed"
             android:textColor="#fff"
             android:textSize="20dp"
-            android:layout_margin="20dp"
+            android:layout_margin="8dp"
             />
     </LinearLayout>
 </LinearLayout>

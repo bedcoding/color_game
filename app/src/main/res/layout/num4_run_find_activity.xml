@@ -225,7 +225,7 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_marginTop="10dp"
-            android:src="@drawable/walk"
+            android:src="@drawable/appicon"
             android:id="@+id/WalkImage_View_Id"
             />
 
@@ -236,7 +236,6 @@
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
             android:fontFamily="sans-serif-condensed"
-            android:gravity="center"
             android:text="(사진 설명)"
             android:textColor="#fabe29"
             android:textSize="18sp" />
