@@ -213,12 +213,12 @@
             android:gravity="center"
             android:orientation="horizontal"
             android:layout_marginEnd="10dp"
-
             >
+
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/thirst"
+                android:src="@drawable/hunger"
                 android:padding="5dp"
                 />
 
@@ -226,18 +226,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="목마름: "
+                android:text="배고픔: "
                 android:textColor="#fabe29"
                 android:textSize="18sp" />
+
             <TextView
-                android:id="@+id/Family_One_Thirst_View_Id"
+                android:id="@+id/Family_One_Hungry_View_Id"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="100"
                 android:textColor="#fabe29"
                 android:textSize="18sp"
-                android:gravity="start|center"
+                android:gravity="center"
                 />
+
         </LinearLayout>
 
     </LinearLayout>
@@ -254,39 +256,6 @@
             android:gravity="center"
             android:orientation="horizontal"
             android:layout_marginEnd="10dp"
-
-            >
-            <ImageView
-                android:layout_width="35dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/hunger"
-                android:padding="5dp"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="배고픔: "
-                android:textColor="#fabe29"
-                android:textSize="18sp" />
-            <TextView
-                android:id="@+id/Family_One_Hungry_View_Id"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="100"
-                android:textColor="#fabe29"
-                android:textSize="18sp"
-                android:gravity="center"
-                />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginEnd="10dp"
-
             >
             <ImageView
                 android:layout_width="35dp"
@@ -297,7 +266,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="   Hp    : "
+                android:text="체력    : "
                 android:textColor="#fabe29"
                 android:textSize="18sp"
                 android:gravity="center"
@@ -311,6 +280,52 @@
                 android:textSize="18sp"
                 android:gravity="center"
                 />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginEnd="10dp"
+            >
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/thirst"
+                android:padding="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="목마름: "
+                android:textColor="#fabe29"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/Family_One_Thirst_View_Id"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="100"
+                android:textColor="#fabe29"
+                android:textSize="18sp"
+                android:gravity="start|center"
+                />
+
+
+
+
+
+
+
+
+
+
+
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
@@ -430,48 +445,6 @@
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:layout_marginEnd="10dp"
-
-                    >
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/thirst"
-                        android:padding="5dp"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="목마름 : "
-                        android:textColor="#fabe29"
-                        android:textSize="18sp" />
-                    <TextView
-                        android:id="@+id/Family_Two_Thirst_View_Id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text="100"
-                        android:textColor="#fabe29"
-                        android:textSize="18sp"
-                        android:gravity="start|center"
-                        />
-                </LinearLayout>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_marginTop="5dp"
-                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
-
                     >
                     <ImageView
                         android:layout_width="35dp"
@@ -497,13 +470,21 @@
                         android:gravity="center"
                         />
                 </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:layout_marginEnd="10dp"
-
                     >
                     <ImageView
                         android:layout_width="35dp"
@@ -514,7 +495,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="   Hp    : "
+                        android:text="체력    : "
                         android:textColor="#fabe29"
                         android:textSize="18sp"
                         android:gravity="center"
@@ -527,6 +508,36 @@
                         android:textColor="#fabe29"
                         android:textSize="18sp"
                         android:gravity="center"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginEnd="10dp"
+                    >
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/thirst"
+                        android:padding="5dp"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="목마름 : "
+                        android:textColor="#fabe29"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/Family_Two_Thirst_View_Id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="100"
+                        android:textColor="#fabe29"
+                        android:textSize="18sp"
+                        android:gravity="start|center"
                         />
                 </LinearLayout>
             </LinearLayout>

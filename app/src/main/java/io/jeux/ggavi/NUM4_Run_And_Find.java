@@ -16,6 +16,8 @@ import android.widget.Chronometer;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Random;
+
 
 public class NUM4_Run_And_Find extends AppCompatActivity implements SensorEventListener {
 
@@ -185,15 +187,44 @@ public class NUM4_Run_And_Find extends AppCompatActivity implements SensorEventL
 
 
 
-
+        // 걷기 종료를 누른 경우
         End_Walk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 int Temp_Day=Data_Box.getInt("Day",0);
-                Temp_Day++;
+                Temp_Day++;  // 다음 날짜로 ++
+
+
+                // 다음날 배고픔, 목마름 마이너스 시키기 위해 변수 선언
+                int Temp_One_Hungry=Data_Box.getInt("Family_One_Hungry",100);
+                int Temp_Two_Hungry=Data_Box.getInt("Family_Two_Hungry",100);
+                int Temp_One_Thirst=Data_Box.getInt("Family_One_Thirst",100);
+                int Temp_Two_Thirst=Data_Box.getInt("Family_Two_Thirst",100);
+
+                // 다음날 배고픔, 목마름 마이너스 시키기 위해 랜덤 함수 호출
+                Random r = new Random();
+                int Random_One_Value1 = r.nextInt(30 - 10) + 10;
+                int Random_One_Value2 = r.nextInt(30 - 10) + 10;
+                int Random_Two_Value1 = r.nextInt(30 - 10) + 10;
+                int Random_Two_Value2 = r.nextInt(30 - 10) + 10;
+
+                // 다음날 배고픔, 목마름 마이너스 시키기
+                Temp_One_Hungry=Temp_One_Hungry-Random_One_Value1;
+                Temp_Two_Hungry=Temp_Two_Hungry-Random_Two_Value1;
+                Temp_One_Thirst=Temp_One_Thirst-Random_One_Value2;
+                Temp_Two_Thirst=Temp_Two_Thirst-Random_Two_Value2;
+
+                // Day +1, 갱신된 배고픔과 목마름 숫자 삽입!!
                 SharedPreferences.Editor editor = Data_Box.edit();
                 editor.putInt("Day",Temp_Day);
+                editor.putInt("Family_One_Hungry",Temp_One_Hungry);
+                editor.putInt("Family_Two_Hungry",Temp_Two_Hungry);
+                editor.putInt("Family_One_Thirst",Temp_One_Thirst);
+                editor.putInt("Family_Two_Thirst",Temp_Two_Thirst);
+
                 editor.commit();
+
+                // 화면 전환
                 startActivity(new Intent(NUM4_Run_And_Find.this,NUM1_Diary_Msg.class));
                 finish();
             }

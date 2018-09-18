@@ -34,12 +34,28 @@ public class NUM1_Diary_Msg extends AppCompatActivity {
         {
             int Temp_One_Hungry=Data_Box.getInt("Family_One_Hungry",100);
             int Temp_Two_Hungry=Data_Box.getInt("Family_Two_Hungry",100);
+            int Temp_One_Thirst=Data_Box.getInt("Family_One_Thirst",100);
+            int Temp_Two_Thirst=Data_Box.getInt("Family_Two_Thirst",100);
 
+
+            /*
+            // 하루가 지나면 배고픔, 목마름 지수가 마이너스 시킨다.
+            // 그런데 이 구간에서 마이너스 시킬 경우 불러오기 할때마다 마이너스 되는 버그 발생
             Random r = new Random();
             int Random_One_Value = r.nextInt(30 - 10) + 10;
             Temp_One_Hungry=Temp_One_Hungry-Random_One_Value;
+
             int Random_Two_Value = r.nextInt(30 - 10) + 10;
             Temp_Two_Hungry=Temp_Two_Hungry-Random_Two_Value;
+
+            int Random_One_Value2 = r.nextInt(30 - 10) + 10;
+            Temp_One_Thirst=Temp_One_Thirst-Random_One_Value2;
+
+            int Random_Two_Value2 = r.nextInt(30 - 10) + 10;
+            Temp_Two_Thirst=Temp_Two_Thirst-Random_Two_Value2;
+            */
+
+
             int Temp_Global_Damage,Temp_Family_One_Damage,Temp_Family_Two_Damage;
             Temp_Global_Damage=Data_Box.getInt("Global_Damage",-1);
             Temp_Global_Damage=Temp_Global_Damage-Day;
@@ -55,6 +71,12 @@ public class NUM1_Diary_Msg extends AppCompatActivity {
             SharedPreferences.Editor editor = Data_Box.edit();
             editor.putInt("Family_One_Hungry",Temp_One_Hungry);
             editor.putInt("Family_Two_Hungry",Temp_Two_Hungry);
+
+            editor.putInt("Family_One_Thirst",Temp_One_Thirst);
+            editor.putInt("Family_Two_Thirst",Temp_Two_Thirst);
+
+
+
             editor.putInt("Family_One_Hp",Temp_One_Hp);
             editor.putInt("Family_Two_Hp",Temp_Two_Hp);
             editor.putInt("Global_Damage",Temp_Global_Damage);
