@@ -31,6 +31,7 @@ public class NUM0_Start_Game_Menu extends AppCompatActivity {
                 SharedPreferences Data_Box= getApplicationContext().getSharedPreferences("Data_Box",MODE_PRIVATE);
                 SharedPreferences.Editor editor = Data_Box.edit();
                 editor.putInt("Day",0);
+
                 SharedPreferences.Editor Editor=Data_Box.edit();
                 Editor.putInt("Family_One_Hungry",100);
                 Editor.putInt("Family_One_Thirst",100);
@@ -38,14 +39,13 @@ public class NUM0_Start_Game_Menu extends AppCompatActivity {
                 Editor.putInt("Family_Two_Hungry",100);
                 Editor.putInt("Family_Two_Thirst",100);
                 Editor.putInt("Family_Two_Hp",100);
-                Editor.putInt("Food",20);
-                Editor.putInt("Water",20);
+                Editor.putInt("Food",10);
+                Editor.putInt("Water",5);
                 Editor.putInt("Global_Damage",-1);
                 Editor.putInt("Family_One_Damage",-1);
                 Editor.putInt("Family_Two_Damage",-1);
                 Editor.putBoolean("Family_One_Not_Died", true);
-                Editor.putBoolean("Family_One_Not_Died", true);
-
+                Editor.putBoolean("Family_Two_Not_Died", true);
 
 
                 Editor.commit();
@@ -66,7 +66,5 @@ public class NUM0_Start_Game_Menu extends AppCompatActivity {
         });
 
     }
-
-
 
 }

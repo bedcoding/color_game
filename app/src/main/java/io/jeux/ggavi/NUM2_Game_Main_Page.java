@@ -122,8 +122,7 @@ public class NUM2_Game_Main_Page extends AppCompatActivity {
         family_One_Food_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Food > 0 && Family_One_Hungry < 100)
-                {
+                if (Food > 0 && Family_One_Hungry < 100) {
                     Food--;
                     Random r = new Random();
 
@@ -131,26 +130,16 @@ public class NUM2_Game_Main_Page extends AppCompatActivity {
                     Family_One_Hungry = Family_One_Hungry + Random_One_Value;
 
                     // 100 이상 회복될 경우 그냥 100으로 고정
-                    if (Family_One_Hungry > 100)
-                    {
+                    if (Family_One_Hungry > 100) {
                         Family_One_Hungry = 100;
                     }
 
                     Put_And_Update_Data();
-                }
-
-                else if (Food <= 0)
-                {
+                } else if (Food <= 0) {
                     No_Use_Dialogue("아이템이 부족합니다.");
-                }
-
-                else if (Family_One_Hungry >= 100)
-                {
+                } else if (Family_One_Hungry >= 100) {
                     No_Use_Dialogue("더 줄 필요가 없습니다.");
-                }
-
-                else
-                {
+                } else {
                     No_Use_Dialogue("에러! 줄 수 없습니다!");
                 }
             }
@@ -160,73 +149,50 @@ public class NUM2_Game_Main_Page extends AppCompatActivity {
         family_One_Water_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Water > 0 && Family_One_Thirst < 100)
-                {
+                if (Water > 0 && Family_One_Thirst < 100) {
                     Water--;
                     Random r = new Random();
                     int Random_One_Value = r.nextInt(30 - 10) + 10;
                     Family_One_Thirst = Family_One_Thirst + Random_One_Value;
 
                     // 100 이상 회복될 경우 그냥 100으로 고정
-                    if (Family_One_Thirst > 100)
-                    {
+                    if (Family_One_Thirst > 100) {
                         Family_One_Thirst = 100;
                     }
 
                     Put_And_Update_Data();
-                }
-
-                else if (Water <= 0)
-                {
+                } else if (Water <= 0) {
                     No_Use_Dialogue("아이템이 부족합니다.");
-                }
-
-                else if (Family_One_Thirst >= 100)
-                {
+                } else if (Family_One_Thirst >= 100) {
                     No_Use_Dialogue("더 줄 필요가 없습니다.");
-                }
-
-                else
-                {
+                } else {
                     No_Use_Dialogue("에러! 줄 수 없습니다!");
                 }
             }
         });
 
 
-
         // 둘째놈 Food 버튼 클릭시!!
         family_Two_Food_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(Food > 0 && Family_Two_Hungry < 100)
-                {
+                if (Food > 0 && Family_Two_Hungry < 100) {
                     Food--;
                     Random r = new Random();
                     int Random_One_Value = r.nextInt(30 - 10) + 10;
                     Family_Two_Hungry = Family_Two_Hungry + Random_One_Value;
 
                     // 100 이상 회복될 경우 그냥 100으로 고정
-                    if (Family_Two_Hungry > 100)
-                    {
+                    if (Family_Two_Hungry > 100) {
                         Family_Two_Hungry = 100;
                     }
 
                     Put_And_Update_Data();
-                }
-
-                else if (Food <= 0)
-                {
+                } else if (Food <= 0) {
                     No_Use_Dialogue("아이템이 부족합니다.");
-                }
-
-                else if (Family_Two_Hungry >= 100)
-                {
+                } else if (Family_Two_Hungry >= 100) {
                     No_Use_Dialogue("더 줄 필요가 없습니다.");
-                }
-
-                else
-                {
+                } else {
                     No_Use_Dialogue("에러! 줄 수 없습니다!");
                 }
             }
@@ -236,32 +202,21 @@ public class NUM2_Game_Main_Page extends AppCompatActivity {
         family_Two_Water_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(Water > 0 && Family_Two_Thirst < 100)
-                {
+                if (Water > 0 && Family_Two_Thirst < 100) {
                     Water--;
                     Random r = new Random();
                     int Random_One_Value = r.nextInt(30 - 10) + 10;
                     Family_Two_Thirst = Family_Two_Thirst + Random_One_Value;
-                    if (Family_Two_Thirst > 100)
-                    {
+                    if (Family_Two_Thirst > 100) {
                         Family_Two_Thirst = 100;
                     }
 
                     Put_And_Update_Data();
-                }
-
-                else if (Water <= 0)
-                {
+                } else if (Water <= 0) {
                     No_Use_Dialogue("아이템이 부족합니다.");
-                }
-
-                else if (Family_Two_Thirst >= 100)
-                {
+                } else if (Family_Two_Thirst >= 100) {
                     No_Use_Dialogue("더 줄 필요가 없습니다.");
-                }
-
-                else
-                {
+                } else {
                     No_Use_Dialogue("에러! 줄 수 없습니다!");
                 }
 
@@ -275,22 +230,34 @@ public class NUM2_Game_Main_Page extends AppCompatActivity {
         SharedPreferences.Editor Editor = Data_Box.edit();
         // Set Data
 
-
         // 첫째놈이 죽은 경우
-        if (Family_One_Hungry <= 0 || Family_One_Thirst <= 0) {
+        if (Family_One_Hungry <= 0 || Family_One_Thirst <= 0 || Family_One_Hp <= 0 || !Family_One_Not_Died)  // 주인공이 죽었을 경우 Family_One_Not_Died는 False (즉 느낌표를 붙여서 True가 되면 사망상태)
+        {
+
             Family_One_Hungry_View.setText(" _");
             Family_One_Thirst_View.setText(" _ ");
             Family_One_Hp_View.setText(" _ ");
             Family_One_Damage_View.setText(" _ ");
 
-            if (Family_One_Not_Died) {
-                Rate_Us_Dialogue("첫째가 죽었습니다...");
-                Family_One_Not_Died = false;
-                Editor.putBoolean("Family_One_Not_Died", Family_One_Not_Died);
+            if (Family_One_Hungry <= 0) {
+                Kill_Dialogue("첫째가 굶어 죽었습니다...");
+            } else if (Family_One_Thirst <= 0) {
+                Kill_Dialogue("첫째가 목말라 죽었습니다...");
+            } else if (Family_One_Hp <= 0) {
+                Kill_Dialogue("첫째가 마력 부족으로 죽었습니다...");
+            } else {
+                Kill_Dialogue("에러! 첫째가 좀비처럼 또 죽었습니다...");
             }
+
+            // 만약 둘중 한명만 사망해도 게임오버 안되고 계속 게임을 진행 가능하게 만들 경우를 대비해 만든 구간
+            // 그러나 현재는 예산부족으로 인해(...) 둘중 한놈만 죽어도 바로 [Kill_Dialogue]에서 엔딩 동영상으로 이어지게 해놨다.
+
+            //if (Family_One_Not_Died) {}
+            Family_One_Not_Died = false;
+            Editor.putBoolean("Family_One_Not_Died", Family_One_Not_Died);
         }
 
-        // 첫째가 안 죽었다면1
+        // 첫째가 안 죽었다면
         else {
             Family_One_Hungry_View.setText(String.valueOf(Family_One_Hungry));
             Family_One_Thirst_View.setText(String.valueOf(Family_One_Thirst));
@@ -304,19 +271,29 @@ public class NUM2_Game_Main_Page extends AppCompatActivity {
 
 
         // 둘째 놈이 죽은 경우
-        if (Family_Two_Hungry <= 0 || Family_Two_Thirst <= 0) {
+        if (Family_Two_Hungry <= 0 || Family_Two_Thirst <= 0 || Family_Two_Hp <= 0 || !Family_Two_Not_Died)  // 주인공이 죽었을 경우 Family_One_Not_Died는 False (즉 느낌표를 붙여서 True가 되면 사망상태)
+        {
             Family_Two_Hungry_View.setText(" _ ");
             Family_Two_Thirst_View.setText(" _ ");
             Family_Two_Hp_View.setText(" _ ");
             Family_Two_Damage_View.setText(" _ ");
-            if (Family_Two_Not_Died) {
-                Rate_Us_Dialogue("둘째가 죽었습니다...");
-                Family_Two_Not_Died = false;
-                Editor.putBoolean("Family_Two_Not_Died", Family_Two_Not_Died);
+
+            if (Family_Two_Hungry <= 0) {
+                Kill_Dialogue("둘째가 굶어 죽었습니다...");
+            } else if (Family_Two_Thirst <= 0) {
+                Kill_Dialogue("둘째가 목말라 죽었습니다...");
+            } else if (Family_Two_Hp <= 0) {
+                Kill_Dialogue("둘째가 마력 부족으로 죽었습니다...");
+            } else {
+                Kill_Dialogue("에러! 둘째가 좀비처럼 또 죽었습니다...");
             }
 
+            Family_Two_Not_Died = false;
+            Editor.putBoolean("Family_Two_Not_Died", Family_Two_Not_Died);
+        }
+
         // 둘째가 안 죽었다면
-        } else {
+        else {
             Family_Two_Hungry_View.setText(String.valueOf(Family_Two_Hungry));
             Family_Two_Thirst_View.setText(String.valueOf(Family_Two_Thirst));
             Family_Two_Hp_View.setText(String.valueOf(Family_Two_Hp));
@@ -344,7 +321,7 @@ public class NUM2_Game_Main_Page extends AppCompatActivity {
 
 
     // 다이어로그1 : 사망
-    private void Rate_Us_Dialogue(String Family_No) {
+    private void Kill_Dialogue(String Family_No) {
         New_Alert_Dialog.setCancelable(false);
         New_Alert_Dialog.setTitle("주인공이 사망했습니다.");
         New_Alert_Dialog.setMessage(Family_No);

@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Life Save Padwa</string>
     <string-array name="Diary_Messages">
-        <item> 1. 어느날 지구를 지나던 꼬마 마법사 레나와 루미는 마력 부족으로 인해 우주선이 추락하여 서울시에 불시착하게 되고, 마력을 보충하기 위해 걷기 시작합니다. </item>
-        <item> 우리는 갈수록 강해지는 방사능 낙진을 피해 계속해서 남하해야만 했다. 걷기를 계속하다보면 간간히 구호단체에서 투하하는 식량을 모을 수 있겠지만, 쓸만한 재료는 이미 다른 누군가에 의해 점거된 상황이었다. </item>
-        <item> 우리는 걷기를 계속했고, 구호단체에서 살포한 식량은 물물교환을 통해 재료로 교환해야만 했다. 그러나 방사능 낙진은 우리가 걷는 속도보다 더 빠른 속도로 다가오고 있었다. </item>
+        <item> 0. 튜토리얼: 어느날 지구로 놀러온 마법사 루미와 레미는 비행선이 추락하는 바람에 서울에 불시착하게 됐습니다. \n\n고장난 비행선이 고쳐지는 동안 이들은 서울을 여행하며 생존에 필요한 물자를 모으고, 재료를 조합해서 마력유지를 위한 아이템을 만들어야 합니다. </item>
+        <item> 1. </item>
+        <item> 2. </item>
         <item>Day 3 Note</item>
         <item>Day 4 Note</item>
         <item>Day 5 Note</item>
@@ -23,30 +23,86 @@
         <item>Day 4 Note</item>
         <item>Day 5 Note</item>
         <item>Day 6 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
         <!-- Add 100 Diary Message  Here -->
 
     </string-array>
     <integer-array name="Images_Data">
-        <item>@drawable/n1gangnam</item>
-        <item>@drawable/walk</item>
+        <item>@drawable/sslogo2</item>
+        <item>@drawable/d1gangnam</item>
         <item>@drawable/bufs</item>
-        <item>@drawable/walk</item>
-        <item>@drawable/walk</item>
-        <item>@drawable/walk</item>
-        <item>@drawable/walk</item>
-        <item>@drawable/walk</item>
-        <item>@drawable/walk</item>
-        <item>@drawable/walk</item>
-        <item>@drawable/walk</item>
-        <item>@drawable/walk</item>
-        <item>@drawable/walk</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+        <item>@drawable/bufs</item>
+
 
         <!-- Add 100 Images Ids Here -->
     </integer-array>
     <string-array name="Image_Description">
-        <item> 조선의 문물과 제도를 완성한 성종과 그의 비 정현왕후의 묘인 선릉, 왕도정치를 실현하고자 노력한 중종의 묘인 정릉을 돌아보며 조선 왕조의 역사와 세계문화유산으로 등재된 조선왕릉에 대해 배우고, 조선 시대 대표적인 사찰 봉은사에서 문정왕후와 보우스님, 서산대사 휴정, 추사 김정희 등 여러 역사적 인물의 발자취를 느낄 수 있는 코스이다. </item>
-        <item> 여기에 코스 설명을 넣어요! </item>
-        <item> 여기에 코스 설명을 넣어요! </item>
+        <item> 0. 튜토리얼 : 스마트폰을 들고 걷기를 시작할 경우, 만보기 센서가 동작하면서 Step 숫자가 올라갑니다. 이때 특정 걸음 이상 걸었을 경우 아이템을 발견할 수 있습니다. \n\n수집한 아이템은 마력보충 아이템으로 제작 가능합니다. 배고픔, 목마름, 마력 3개의 능력치가 0이 되면 주인공이 사망하므로 주의해야 합니다. 마력변화량의 수치는 다음 날짜에 반영됩니다. </item>
+        <item> 1. 조선의 문물과 제도를 완성한 성종과 그의 비 정현왕후의 묘인 선릉, 왕도정치를 실현하고자 노력한 중종의 묘인 정릉을 돌아보며 조선 왕조의 역사와 세계문화유산으로 등재된 조선왕릉에 대해 배우고, 조선 시대 대표적인 사찰 봉은사에서 문정왕후와 보우스님, 서산대사 휴정, 추사 김정희 등 여러 역사적 인물의 발자취를 느낄 수 있는 코스이다. </item>
+        <item> 2. 여기에 코스 설명을 넣어요! </item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 3 Note</item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 3 Note</item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 3 Note</item>
+        <item>Day 4 Note</item>
+        <item>Day 5 Note</item>
+        <item>Day 6 Note</item>
+        <item>Day 3 Note</item>
         <item>Day 4 Note</item>
         <item>Day 5 Note</item>
         <item>Day 6 Note</item>

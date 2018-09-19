@@ -1,5 +1,6 @@
 package io.jeux.ggavi;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
@@ -15,21 +16,20 @@ import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
 
 public class NUM4_Run_And_Find extends AppCompatActivity implements SensorEventListener {
 
-
-    private int Collected_Food,Collected_Water;
-    private int View_Collected_Food,View_Collected_Water;
+    private BackPressCloseHandler backPressCloseHandler;
+    private int Collected_Food, Collected_Water;
+    private int View_Collected_Food, View_Collected_Water;
 
     int Temp_Step_Taken;
-    TextView Steps_View,Collected_Food_View,Collected_Water_View;
+    TextView Steps_View, Collected_Food_View, Collected_Water_View;
     SharedPreferences Data_Box;
-
-
 
 
     // 만보기 변수선언 투척
@@ -47,27 +47,25 @@ public class NUM4_Run_And_Find extends AppCompatActivity implements SensorEventL
 
     private SensorManager sensorManager;
     private Sensor accelerormeterSensor;
-
     //////////////////////////////////////////////////////
-
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.num4_run_find_activity);
-        Temp_Step_Taken=Collected_Food=Collected_Water=0;
-        View_Collected_Food=View_Collected_Water=0;
 
-        Data_Box= getApplicationContext().getSharedPreferences("Data_Box",MODE_PRIVATE);
+        backPressCloseHandler = new BackPressCloseHandler(this);
+
+        Temp_Step_Taken = Collected_Food = Collected_Water = 0;
+        View_Collected_Food = View_Collected_Water = 0;
+
+        Data_Box = getApplicationContext().getSharedPreferences("Data_Box", MODE_PRIVATE);
         Image_Setting();
         Initiating_Views();
 
 
-
-
-
-        // 만보기 기능 투척
+        //// 만보기 기능 투척 ////
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         accelerormeterSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
@@ -77,14 +75,7 @@ public class NUM4_Run_And_Find extends AppCompatActivity implements SensorEventL
     }
 
 
-
-
-
-
-
-    // 만보기 함수 투척
-
-
+    //// 만보기 함수 투척 ////
     @Override
     public void onStart() {
         super.onStart();
@@ -116,15 +107,13 @@ public class NUM4_Run_And_Find extends AppCompatActivity implements SensorEventL
                 if (speed > SHAKE_THRESHOLD) {
                     Temp_Step_Taken++;
 
-                    if(Temp_Step_Taken%100==0)
-                    {
-                        Collected_Food=Collected_Food+2;
+                    if (Temp_Step_Taken % 100 == 0) {
+                        Collected_Food = Collected_Food + 2;
                         Collected_Water++;
 
-                    }else
-                    {
-                        Collected_Food=0;
-                        Collected_Water=0;
+                    } else {
+                        Collected_Food = 0;
+                        Collected_Water = 0;
                     }
                     Put_And_Update();
                 }
@@ -137,8 +126,7 @@ public class NUM4_Run_And_Find extends AppCompatActivity implements SensorEventL
     }
 
     @Override
-    public void onAccuracyChanged(Sensor sensor, int accuracy)
-    {
+    public void onAccuracyChanged(Sensor sensor, int accuracy) {
 
     }
 
@@ -148,16 +136,13 @@ public class NUM4_Run_And_Find extends AppCompatActivity implements SensorEventL
 
 
 
-
-
-    private void Initiating_Views()
-    {
-        Chronometer Chronometer_View=findViewById(R.id.Chronometer_View_Id);
-        Steps_View=findViewById(R.id.Steps_Taken_View_Id);
-        Collected_Food_View=findViewById(R.id.Collected_Food_View_Id);
-        Collected_Water_View=findViewById(R.id.Collected_Water_View_Id);
-        Button Click_Button=findViewById(R.id.Run_Button_Id);
-        Button End_Walk=findViewById(R.id.Stop_walk_Button_Id);
+    private void Initiating_Views() {
+        Chronometer Chronometer_View = findViewById(R.id.Chronometer_View_Id);
+        Steps_View = findViewById(R.id.Steps_Taken_View_Id);
+        Collected_Food_View = findViewById(R.id.Collected_Food_View_Id);
+        Collected_Water_View = findViewById(R.id.Collected_Water_View_Id);
+        Button Click_Button = findViewById(R.id.Run_Button_Id);
+        Button End_Walk = findViewById(R.id.Stop_walk_Button_Id);
         Put_And_Update();
 
         Chronometer_View.setBase(SystemClock.elapsedRealtime());
@@ -169,15 +154,13 @@ public class NUM4_Run_And_Find extends AppCompatActivity implements SensorEventL
             @Override
             public void onClick(View v) {
                 Temp_Step_Taken++;
-                if(Temp_Step_Taken%100==0)
-                {
-                    Collected_Food=Collected_Food+2;
+                if (Temp_Step_Taken % 100 == 0) {
+                    Collected_Food = Collected_Food + 2;
                     Collected_Water++;
 
-                }else
-                {
-                    Collected_Food=0;
-                    Collected_Water=0;
+                } else {
+                    Collected_Food = 0;
+                    Collected_Water = 0;
                 }
                 Put_And_Update();
 
@@ -185,21 +168,19 @@ public class NUM4_Run_And_Find extends AppCompatActivity implements SensorEventL
         });
 
 
-
-
         // 걷기 종료를 누른 경우
         End_Walk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int Temp_Day=Data_Box.getInt("Day",0);
+                int Temp_Day = Data_Box.getInt("Day", 0);
                 Temp_Day++;  // 다음 날짜로 ++
 
 
                 // 다음날 배고픔, 목마름 마이너스 시키기 위해 변수 선언
-                int Temp_One_Hungry=Data_Box.getInt("Family_One_Hungry",100);
-                int Temp_Two_Hungry=Data_Box.getInt("Family_Two_Hungry",100);
-                int Temp_One_Thirst=Data_Box.getInt("Family_One_Thirst",100);
-                int Temp_Two_Thirst=Data_Box.getInt("Family_Two_Thirst",100);
+                int Temp_One_Hungry = Data_Box.getInt("Family_One_Hungry", 100);
+                int Temp_Two_Hungry = Data_Box.getInt("Family_Two_Hungry", 100);
+                int Temp_One_Thirst = Data_Box.getInt("Family_One_Thirst", 100);
+                int Temp_Two_Thirst = Data_Box.getInt("Family_Two_Thirst", 100);
 
                 // 다음날 배고픔, 목마름 마이너스 시키기 위해 랜덤 함수 호출
                 Random r = new Random();
@@ -209,68 +190,107 @@ public class NUM4_Run_And_Find extends AppCompatActivity implements SensorEventL
                 int Random_Two_Value2 = r.nextInt(30 - 10) + 10;
 
                 // 다음날 배고픔, 목마름 마이너스 시키기
-                Temp_One_Hungry=Temp_One_Hungry-Random_One_Value1;
-                Temp_Two_Hungry=Temp_Two_Hungry-Random_Two_Value1;
-                Temp_One_Thirst=Temp_One_Thirst-Random_One_Value2;
-                Temp_Two_Thirst=Temp_Two_Thirst-Random_Two_Value2;
+                Temp_One_Hungry = Temp_One_Hungry - Random_One_Value1;
+                Temp_Two_Hungry = Temp_Two_Hungry - Random_Two_Value1;
+                Temp_One_Thirst = Temp_One_Thirst - Random_One_Value2;
+                Temp_Two_Thirst = Temp_Two_Thirst - Random_Two_Value2;
 
                 // Day +1, 갱신된 배고픔과 목마름 숫자 삽입!!
                 SharedPreferences.Editor editor = Data_Box.edit();
-                editor.putInt("Day",Temp_Day);
-                editor.putInt("Family_One_Hungry",Temp_One_Hungry);
-                editor.putInt("Family_Two_Hungry",Temp_Two_Hungry);
-                editor.putInt("Family_One_Thirst",Temp_One_Thirst);
-                editor.putInt("Family_Two_Thirst",Temp_Two_Thirst);
+                editor.putInt("Day", Temp_Day);
+                editor.putInt("Family_One_Hungry", Temp_One_Hungry);
+                editor.putInt("Family_Two_Hungry", Temp_Two_Hungry);
+                editor.putInt("Family_One_Thirst", Temp_One_Thirst);
+                editor.putInt("Family_Two_Thirst", Temp_Two_Thirst);
 
                 editor.commit();
 
                 // 화면 전환
-                startActivity(new Intent(NUM4_Run_And_Find.this,NUM1_Diary_Msg.class));
+                startActivity(new Intent(NUM4_Run_And_Find.this, NUM1_Diary_Msg.class));
                 finish();
             }
         });
     }
 
 
-    private void Put_And_Update()
-    {
-        View_Collected_Food=View_Collected_Food+Collected_Food;
-        View_Collected_Water=View_Collected_Water+Collected_Water;
+    private void Put_And_Update() {
+        View_Collected_Food = View_Collected_Food + Collected_Food;
+        View_Collected_Water = View_Collected_Water + Collected_Water;
 
-        Steps_View.setText(Temp_Step_Taken+"");
-        Collected_Food_View.setText(View_Collected_Food+"");
-        Collected_Water_View.setText(View_Collected_Water+"");
+        Steps_View.setText(Temp_Step_Taken + "");
+        Collected_Food_View.setText(View_Collected_Food + "");
+        Collected_Water_View.setText(View_Collected_Water + "");
 
-        int Food=Data_Box.getInt("Food",1);
-        int Water=Data_Box.getInt("Water",1);
+        int Food = Data_Box.getInt("Food", 1);
+        int Water = Data_Box.getInt("Water", 1);
 
-        Food=Food+Collected_Food;
-        Water=Water+Collected_Water;
+        Food = Food + Collected_Food;
+        Water = Water + Collected_Water;
 
         SharedPreferences.Editor editor = Data_Box.edit();
-        editor.putInt("Food",Food);
-        editor.putInt("Water",Water);
+        editor.putInt("Food", Food);
+        editor.putInt("Water", Water);
         editor.commit();
     }
 
-    private void Image_Setting()
-    {
-        int Day=Data_Box.getInt("Day",0);
-        TypedArray Images_Array=getResources().obtainTypedArray(R.array.Images_Data);
-        String Image_Description[]=getResources().getStringArray(R.array.Image_Description);
+    private void Image_Setting() {
+        int Day = Data_Box.getInt("Day", 0);
+        TypedArray Images_Array = getResources().obtainTypedArray(R.array.Images_Data);
+        String Image_Description[] = getResources().getStringArray(R.array.Image_Description);
 
-        ImageView Status_Image=findViewById(R.id.WalkImage_View_Id);
-        TextView Status_Image_Description=findViewById(R.id.WalkImage_Des_View_Id);
-        Status_Image.setImageResource(Images_Array.getResourceId(Day,-1));
+        ImageView Status_Image = findViewById(R.id.WalkImage_View_Id);
+        TextView Status_Image_Description = findViewById(R.id.WalkImage_Des_View_Id);
+        Status_Image.setImageResource(Images_Array.getResourceId(Day, -1));
         Status_Image_Description.setText(Image_Description[Day]);
         Images_Array.recycle();
     }
 
+/*
     @Override
     public void onBackPressed() {
         //  super.onBackPressed();
-        startActivity(new Intent(NUM4_Run_And_Find.this,NUM2_Game_Main_Page.class));
+        startActivity(new Intent(NUM4_Run_And_Find.this, NUM2_Game_Main_Page.class));
         finish();
     }
+*/
+
+    @Override
+    public void onBackPressed()
+    {
+        backPressCloseHandler.onBackPressed();
+    }
+
+    public class BackPressCloseHandler {
+        private long backKeyPressedTime = 0;
+        private Toast toast;
+        private Activity activity;
+
+        public BackPressCloseHandler(Activity context) {
+            this.activity = context;
+        }
+
+        public void onBackPressed() {
+            if (System.currentTimeMillis() > backKeyPressedTime + 1000) {
+                backKeyPressedTime = System.currentTimeMillis();
+                showGuide();
+                return;
+            }
+            if (System.currentTimeMillis() <= backKeyPressedTime + 1000) {
+                startActivity(new Intent(NUM4_Run_And_Find.this, NUM2_Game_Main_Page.class));
+                finish();
+                toast.cancel();
+            }
+        }
+
+        public void showGuide()
+        {
+            toast = Toast.makeText(activity, "뒤로가기 버튼을 한번 더 누르시면 이동됩니다.", Toast.LENGTH_SHORT);
+            toast.show();
+        }
+    }
+
+
+
+
 
 }

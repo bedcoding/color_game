@@ -121,7 +121,7 @@
                 android:layout_height="match_parent"
                 android:layout_centerHorizontal="true"
                 android:gravity="center"
-                android:text="   체력 감소량: "
+                android:text="   마력 감소량: "
                 android:textColor="#00BFFF"
                 android:textSize="18sp" />
             <TextView
@@ -157,7 +157,7 @@
             android:layout_height="35dp"
             android:background="@drawable/top_bar_back"
             android:gravity="center"
-            android:text="관광객1"
+            android:text="루미의 아이템 창"
             android:textColor="#fabe29" />
 
         <LinearLayout
@@ -193,7 +193,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:text="체력 감소량: "
+                android:text="마력 변화량: "
                 android:textColor="#fabe29"
                 android:textSize="18sp" />
 
@@ -266,7 +266,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="체력    : "
+                android:text="남은 마력: "
                 android:textColor="#fabe29"
                 android:textSize="18sp"
                 android:gravity="center"
@@ -288,7 +288,7 @@
             android:layout_height="35dp"
             android:gravity="center"
             android:orientation="horizontal"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="28dp"
             >
 
             <ImageView
@@ -315,16 +315,6 @@
                 android:textSize="18sp"
                 android:gravity="start|center"
                 />
-
-
-
-
-
-
-
-
-
-
 
         </LinearLayout>
     </LinearLayout>
@@ -391,7 +381,7 @@
             android:layout_height="35dp"
             android:background="@drawable/top_bar_back"
             android:gravity="center"
-            android:text="관광객2"
+            android:text="레미의 아이템 창"
             android:textColor="#fabe29" />
 
         <LinearLayout
@@ -426,7 +416,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:text="체력 감소량 : "
+                        android:text="마력 변화량 : "
                         android:textColor="#fabe29"
                         android:textSize="18sp" />
                     <TextView
@@ -495,7 +485,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="체력    : "
+                        android:text="남은 마력: "
                         android:textColor="#fabe29"
                         android:textSize="18sp"
                         android:gravity="center"
@@ -515,7 +505,7 @@
                     android:layout_height="35dp"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:layout_marginEnd="10dp"
+                    android:layout_marginEnd="25dp"
                     >
                     <ImageView
                         android:layout_width="35dp"
@@ -596,7 +586,7 @@
             android:id="@+id/Item_List_Button_Id"
             android:layout_width="170dp"
             android:layout_height="40dp"
-            android:text="Item List"
+            android:text="아이템 제작"
             android:textAllCaps="false"
             android:background="@drawable/top_bar_back"
             android:fontFamily="sans-serif-condensed"
@@ -608,7 +598,7 @@
             android:id="@+id/Start_Running_Button_Id"
             android:layout_width="170dp"
             android:layout_height="40dp"
-            android:text="Start Running"
+            android:text="걷기 시작"
             android:textAllCaps="false"
             android:background="@drawable/top_bar_back"
             android:fontFamily="sans-serif-condensed"

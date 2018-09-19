@@ -141,14 +141,14 @@
                         android:src="@drawable/hunger"
                         android:padding="5dp"
                         />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Got Food : "
-                        android:textColor="#fabe29"
-                        android:textSize="18sp"
                         android:gravity="center"
-                        />
+                        android:text="Get Food : "
+                        android:textColor="#fabe29"
+                        android:textSize="18sp" />
                     <TextView
                         android:id="@+id/Collected_Food_View_Id"
                         android:layout_width="wrap_content"
@@ -173,14 +173,14 @@
                         android:src="@drawable/thirst"
                         android:padding="5dp"
                         />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:text="Got Water : "
-                        android:textColor="#fabe29"
-                        android:textSize="18sp"
                         android:gravity="center"
-                        />
+                        android:text="Get Water : "
+                        android:textColor="#fabe29"
+                        android:textSize="18sp" />
                     <TextView
                         android:id="@+id/Collected_Water_View_Id"
                         android:layout_width="wrap_content"
@@ -225,7 +225,7 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_marginTop="10dp"
-            android:src="@drawable/appicon"
+            android:src="@drawable/sslogo2"
             android:id="@+id/WalkImage_View_Id"
             />
 
