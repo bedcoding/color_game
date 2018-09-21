@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="io.jeux.ggavi.NUM0_Start_Game_Menu"
+    tools:context="io.jeux.ggavi.NUM0_GameStart"
     android:background="@drawable/sp_back"
     android:gravity="center"
     >

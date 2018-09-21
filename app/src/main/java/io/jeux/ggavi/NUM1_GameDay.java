@@ -11,16 +11,14 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.Random;
 
-
-public class NUM1_Diary_Msg extends AppCompatActivity {
+public class NUM1_GameDay extends AppCompatActivity {
     private int Day = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.num1_diary_msg_activity);
+        setContentView(R.layout.num1_activity_game_day);
         // ActionBar Hide!
         Initiate_Diary();
     }
@@ -109,10 +107,24 @@ public class NUM1_Diary_Msg extends AppCompatActivity {
 
         Next_Button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent Launch_Activity = new Intent(NUM1_Diary_Msg.this, NUM2_Game_Main_Page.class);
-                startActivity(Launch_Activity);
-                finish();
+            public void onClick(View v)
+            {
+                if(Day < 3)
+                {
+                    Intent Launch_Activity = new Intent(NUM1_GameDay.this, NUM2_GameMain.class);
+                    startActivity(Launch_Activity);
+                    finish();
+                }
+
+                else
+                {
+                    Intent intent = new Intent(
+                            getApplicationContext(),
+                            NUM5_GameEndingVideo.class);  // game ending
+                    finish();                         // end NUM1 screen
+                    startActivity(intent);            // move NUM5 screen
+                }
+
             }
         });
     }

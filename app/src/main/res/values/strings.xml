@@ -125,5 +125,6 @@
         <!-- Add 100 Image Description  Here -->
 
     </string-array>
+    <string name="title_activity_num5__ending_video">NUM5_EndingVideo</string>
 
 </resources>

@@ -4,27 +4,29 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@drawable/appicon"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@drawable/appicon"
         android:supportsRtl="true"
-        android:hardwareAccelerated="false"
-        android:largeHeap="true"
         android:theme="@style/FullScreen">
-        <activity android:name="io.jeux.ggavi.NUM0_Start_Game_Menu">
-
-        </activity>
-        <activity android:name="io.jeux.ggavi.NUM1_Diary_Msg" />
-        <activity android:name="io.jeux.ggavi.NUM2_Game_Main_Page" />
-        <activity android:name="io.jeux.ggavi.NUM3_Get_Item_Menu" />
-        <activity android:name="io.jeux.ggavi.NUM4_Run_And_Find" />
-        <activity android:name="io.jeux.ggavi.Splash_Screen">
+        <activity android:name=".NUM0_GameStart" />
+        <activity android:name=".NUM1_GameDay" />
+        <activity android:name=".NUM2_GameMain" />
+        <activity android:name=".NUM3_GameItem" />
+        <activity android:name=".NUM4_GameRun" />
+        <activity android:name=".Splash_Screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".NUM5_GameEndingVideo"
+            android:label="@string/title_activity_num5__ending_video" />
+        <activity android:name=".NUM5_GameDeadVideo"></activity>
     </application>
 
 </manifest>

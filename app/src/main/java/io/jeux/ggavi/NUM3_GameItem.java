@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class NUM3_Get_Item_Menu extends AppCompatActivity {
+public class NUM3_GameItem extends AppCompatActivity {
 
     private int Food, Water;
     private SharedPreferences Data_Box;
@@ -22,8 +22,8 @@ public class NUM3_Get_Item_Menu extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.num3_get_item_activity);
-        New_Alert_Dialog = new AlertDialog.Builder(NUM3_Get_Item_Menu.this);  // 다이어로그 띄우기 ('아이템을 구매할 수 없습니다!')
+        setContentView(R.layout.num3_activity_game_item);
+        New_Alert_Dialog = new AlertDialog.Builder(NUM3_GameItem.this);  // 다이어로그 띄우기 ('아이템을 구매할 수 없습니다!')
         Reduced_Family_One_Damage = Reduced_Family_Two_Damage = 0;
 
         // ActionBar Hide!
@@ -109,7 +109,7 @@ public class NUM3_Get_Item_Menu extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         //  super.onBackPressed();
-        startActivity(new Intent(NUM3_Get_Item_Menu.this, NUM2_Game_Main_Page.class));
+        startActivity(new Intent(NUM3_GameItem.this, NUM2_GameMain.class));
         finish();
     }
 

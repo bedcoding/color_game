@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="io.jeux.ggavi.NUM4_Run_And_Find"
+    tools:context="io.jeux.ggavi.NUM4_GameRun"
     android:background="#333"
     android:orientation="vertical"
     android:weightSum="3.5"

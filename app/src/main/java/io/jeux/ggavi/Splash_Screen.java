@@ -43,7 +43,7 @@ Splash_Screen extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                startActivity(new Intent(Splash_Screen.this,NUM0_Start_Game_Menu.class));
+                startActivity(new Intent(Splash_Screen.this,NUM0_GameStart.class));
              finish();}});
         Control_Splash.start();
     }

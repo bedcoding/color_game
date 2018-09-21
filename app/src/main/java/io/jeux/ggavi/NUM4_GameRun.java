@@ -21,7 +21,7 @@ import android.widget.Toast;
 import java.util.Random;
 
 
-public class NUM4_Run_And_Find extends AppCompatActivity implements SensorEventListener {
+public class NUM4_GameRun extends AppCompatActivity implements SensorEventListener {
 
     private BackPressCloseHandler backPressCloseHandler;
     private int Collected_Food, Collected_Water;
@@ -53,7 +53,7 @@ public class NUM4_Run_And_Find extends AppCompatActivity implements SensorEventL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.num4_run_find_activity);
+        setContentView(R.layout.num4_activity_game_run);
 
         backPressCloseHandler = new BackPressCloseHandler(this);
 
@@ -206,7 +206,7 @@ public class NUM4_Run_And_Find extends AppCompatActivity implements SensorEventL
                 editor.commit();
 
                 // 화면 전환
-                startActivity(new Intent(NUM4_Run_And_Find.this, NUM1_Diary_Msg.class));
+                startActivity(new Intent(NUM4_GameRun.this, NUM1_GameDay.class));
                 finish();
             }
         });
@@ -249,7 +249,7 @@ public class NUM4_Run_And_Find extends AppCompatActivity implements SensorEventL
     @Override
     public void onBackPressed() {
         //  super.onBackPressed();
-        startActivity(new Intent(NUM4_Run_And_Find.this, NUM2_Game_Main_Page.class));
+        startActivity(new Intent(NUM4_GameRun.this, NUM2_GameMain.class));
         finish();
     }
 */
@@ -276,7 +276,7 @@ public class NUM4_Run_And_Find extends AppCompatActivity implements SensorEventL
                 return;
             }
             if (System.currentTimeMillis() <= backKeyPressedTime + 1000) {
-                startActivity(new Intent(NUM4_Run_And_Find.this, NUM2_Game_Main_Page.class));
+                startActivity(new Intent(NUM4_GameRun.this, NUM2_GameMain.class));
                 finish();
                 toast.cancel();
             }

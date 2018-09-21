@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-public class NUM2_Game_Main_Page extends AppCompatActivity {
+public class NUM2_GameMain extends AppCompatActivity {
 
     private int Family_One_Hungry, Family_One_Thirst, Family_One_Hp, Family_One_Damage;
     private int Family_Two_Hungry, Family_Two_Thirst, Family_Two_Hp, Family_Two_Damage;
@@ -29,8 +29,8 @@ public class NUM2_Game_Main_Page extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.num2_main_game_activity);
-        New_Alert_Dialog = new AlertDialog.Builder(NUM2_Game_Main_Page.this);
+        setContentView(R.layout.num2_activity_game_main);
+        New_Alert_Dialog = new AlertDialog.Builder(NUM2_GameMain.this);
         Data_Box = getApplicationContext().getSharedPreferences("Data_Box", MODE_PRIVATE);
         Getting_Data();
     }
@@ -101,7 +101,7 @@ public class NUM2_Game_Main_Page extends AppCompatActivity {
         Get_Item_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(NUM2_Game_Main_Page.this, NUM3_Get_Item_Menu.class));
+                startActivity(new Intent(NUM2_GameMain.this, NUM3_GameItem.class));
                 finish();
 
             }
@@ -110,7 +110,7 @@ public class NUM2_Game_Main_Page extends AppCompatActivity {
         Running_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(NUM2_Game_Main_Page.this, NUM4_Run_And_Find.class));
+                startActivity(new Intent(NUM2_GameMain.this, NUM4_GameRun.class));
                 finish();
             }
         });

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="io.jeux.ggavi.NUM3_Get_Item_Menu"
+    tools:context="io.jeux.ggavi.NUM3_GameItem"
     android:background="#E0FFFF"
     android:weightSum="3"
     >
