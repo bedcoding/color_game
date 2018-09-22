@@ -41,13 +41,10 @@ public class NUM1_GameDay extends AppCompatActivity {
             Random r = new Random();
             int Random_One_Value = r.nextInt(30 - 10) + 10;
             Temp_One_Hungry=Temp_One_Hungry-Random_One_Value;
-
             int Random_Two_Value = r.nextInt(30 - 10) + 10;
             Temp_Two_Hungry=Temp_Two_Hungry-Random_Two_Value;
-
             int Random_One_Value2 = r.nextInt(30 - 10) + 10;
             Temp_One_Thirst=Temp_One_Thirst-Random_One_Value2;
-
             int Random_Two_Value2 = r.nextInt(30 - 10) + 10;
             Temp_Two_Thirst=Temp_Two_Thirst-Random_Two_Value2;
             */
@@ -109,14 +106,14 @@ public class NUM1_GameDay extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
-                if(Day < 3)
+                if(Day < 30)  // 엔딩 날짜가 아닌 경우
                 {
                     Intent Launch_Activity = new Intent(NUM1_GameDay.this, NUM2_GameMain.class);
                     startActivity(Launch_Activity);
                     finish();
                 }
 
-                else
+                else  // 엔딩 날짜에 도달한 경우
                 {
                     Intent intent = new Intent(
                             getApplicationContext(),
@@ -130,4 +127,3 @@ public class NUM1_GameDay extends AppCompatActivity {
     }
 
 }
-

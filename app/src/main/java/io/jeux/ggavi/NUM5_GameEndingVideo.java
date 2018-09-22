@@ -1,21 +1,25 @@
 package io.jeux.ggavi;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
+import android.support.v4.app.ActivityCompat;
 import android.widget.Toast;
 import android.widget.VideoView;
 
 public class NUM5_GameEndingVideo extends Activity {
 
-    @Override
+    // 뒤로가기 버튼 변수
+    private NUM5_GameEndingVideo.BackPressCloseHandler backPressCloseHandler;
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.num5_activity_game_ending_video);
 
-
+        backPressCloseHandler = new BackPressCloseHandler(this);  // 뒤로가기 버튼용 변수
         VideoView vv = (VideoView) findViewById(R.id.vv);
 
         // http://www ~~~ possible
@@ -48,5 +52,47 @@ public class NUM5_GameEndingVideo extends Activity {
                 return false;
             }
         });
+    }
+
+
+
+
+
+
+    // 뒤로가기 버튼 누를시 동작
+    @Override
+    public void onBackPressed()
+    {
+        backPressCloseHandler.onBackPressed();
+    }
+
+    public class BackPressCloseHandler {
+        private long backKeyPressedTime = 0;
+        private Toast toast;
+        private Activity activity;
+
+        public BackPressCloseHandler(Activity context) {
+            this.activity = context;
+        }
+
+        public void onBackPressed() {
+            if (System.currentTimeMillis() > backKeyPressedTime + 1000) {
+                backKeyPressedTime = System.currentTimeMillis();
+                showGuide();
+                return;
+            }
+            if (System.currentTimeMillis() <= backKeyPressedTime + 1000) {
+                finish();
+                activity.finishAffinity();
+                android.os.Process.killProcess(android.os.Process.myPid());
+                toast.cancel();
+            }
+        }
+
+        public void showGuide()
+        {
+            toast = Toast.makeText(activity, "뒤로가기 버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT);
+            toast.show();
+        }
     }
 }

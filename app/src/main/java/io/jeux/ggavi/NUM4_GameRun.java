@@ -1,6 +1,8 @@
 package io.jeux.ggavi;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
@@ -23,7 +25,7 @@ import java.util.Random;
 
 public class NUM4_GameRun extends AppCompatActivity implements SensorEventListener {
 
-    private BackPressCloseHandler backPressCloseHandler;
+    //private BackPressCloseHandler backPressCloseHandler;  // 뒤로가기 버튼용 변수
     private int Collected_Food, Collected_Water;
     private int View_Collected_Food, View_Collected_Water;
 
@@ -55,7 +57,7 @@ public class NUM4_GameRun extends AppCompatActivity implements SensorEventListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.num4_activity_game_run);
 
-        backPressCloseHandler = new BackPressCloseHandler(this);
+        //backPressCloseHandler = new BackPressCloseHandler(this);  // 뒤로가기 버튼용 변수
 
         Temp_Step_Taken = Collected_Food = Collected_Water = 0;
         View_Collected_Food = View_Collected_Water = 0;
@@ -254,6 +256,28 @@ public class NUM4_GameRun extends AppCompatActivity implements SensorEventListen
     }
 */
 
+    // 뒤로가기 입력을 하는 경우.
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("알림");
+        builder.setMessage("앱을 종료하시겠습니까?");
+        builder.setNegativeButton("취소", null);
+        builder.setPositiveButton("종료", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // 다이얼로그의 긍정 이벤트일 경우 종료한다.
+                finish();
+                android.os.Process.killProcess(android.os.Process.myPid());
+            }
+        });
+        builder.show();
+    }
+
+
+}
+
+/*
     @Override
     public void onBackPressed()
     {
@@ -288,9 +312,9 @@ public class NUM4_GameRun extends AppCompatActivity implements SensorEventListen
             toast.show();
         }
     }
+*/
 
 
 
 
 
-}

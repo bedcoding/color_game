@@ -14,6 +14,8 @@ import java.util.Random;
 
 public class NUM2_GameMain extends AppCompatActivity {
 
+    private Boolean Die = false;
+
     private int Family_One_Hungry, Family_One_Thirst, Family_One_Hp, Family_One_Damage;
     private int Family_Two_Hungry, Family_Two_Thirst, Family_Two_Hp, Family_Two_Damage;
     private int Food, Water, Damage;
@@ -225,7 +227,7 @@ public class NUM2_GameMain extends AppCompatActivity {
 
     }
 
-    //     Updating Data Into Views And Shared Preference
+    // Updating Data Into Views And Shared Preference
     private void Put_And_Update_Data() {
         SharedPreferences.Editor Editor = Data_Box.edit();
         // Set Data
@@ -290,6 +292,8 @@ public class NUM2_GameMain extends AppCompatActivity {
 
             Family_Two_Not_Died = false;
             Editor.putBoolean("Family_Two_Not_Died", Family_Two_Not_Died);
+
+
         }
 
         // 둘째가 안 죽었다면
@@ -322,15 +326,29 @@ public class NUM2_GameMain extends AppCompatActivity {
 
     // 다이어로그1 : 사망
     private void Kill_Dialogue(String Family_No) {
+
+        // 이미 죽은 경우 다이얼로그 안띄우고 걍 종료시킨다!
+        if (Die == true)
+            return;
+
+        Die = true;
         New_Alert_Dialog.setCancelable(false);
         New_Alert_Dialog.setTitle("주인공이 사망했습니다.");
         New_Alert_Dialog.setMessage(Family_No);
+
         New_Alert_Dialog.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
+
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
+                Intent intent = new Intent(
+                        getApplicationContext(),
+                        NUM5_GameDeadVideo.class);  // game ending
+                finish();                         // end NUM1 screen
+                startActivity(intent);            // move NUM5 screen
             }
         }).show();
+
+
     }
 
 
@@ -346,6 +364,9 @@ public class NUM2_GameMain extends AppCompatActivity {
             }
         }).show();
     }
+
+
+
 
 
     // end onCreate()
