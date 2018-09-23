@@ -19,7 +19,7 @@ public class NUM5_GameStartVideo extends Activity {
         VideoView vv = (VideoView) findViewById(R.id.vv);
 
         // http://www ~~~ possible
-        String uriPath = "android.resource://" + getPackageName() + "/" + R.raw.ex;
+        String uriPath = "android.resource://" + getPackageName() + "/" + R.raw.startvideo;
         Uri uri = Uri.parse(uriPath);
         vv.setVideoURI(uri);
         vv.requestFocus();
