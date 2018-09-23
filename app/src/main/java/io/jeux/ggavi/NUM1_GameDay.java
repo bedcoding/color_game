@@ -27,7 +27,18 @@ public class NUM1_GameDay extends AppCompatActivity {
         SharedPreferences Data_Box = getApplicationContext().getSharedPreferences("Data_Box", MODE_PRIVATE);
         Day = Data_Box.getInt("Day", 0);
 
-//   Reducing Hungry And Increasing Damage According To Day
+
+        // 시작 동영상 실행...
+        if (Day == 0)
+        {
+            Intent intent = new Intent(
+                    getApplicationContext(),
+                    NUM5_GameStartVideo.class);  // game video
+            startActivity(intent);            // move NUM5 screen
+        }
+
+
+        //   Reducing Hungry And Increasing Damage According To Day
         if (Day >= 1) {
             int Temp_One_Hungry = Data_Box.getInt("Family_One_Hungry", 100);
             int Temp_Two_Hungry = Data_Box.getInt("Family_Two_Hungry", 100);

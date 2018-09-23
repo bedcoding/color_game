@@ -12,7 +12,7 @@ import android.widget.VideoView;
 public class NUM5_GameEndingVideo extends Activity {
 
     // 뒤로가기 버튼 변수
-    private NUM5_GameEndingVideo.BackPressCloseHandler backPressCloseHandler;
+    private BackPressCloseHandler backPressCloseHandler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class NUM5_GameEndingVideo extends Activity {
         VideoView vv = (VideoView) findViewById(R.id.vv);
 
         // http://www ~~~ possible
-        String uriPath = "android.resource://" + getPackageName() + "/" + R.raw.ex;
+        String uriPath = "android.resource://" + getPackageName() + "/" + R.raw.goodending;
         Uri uri = Uri.parse(uriPath);
         vv.setVideoURI(uri);
         vv.requestFocus();
