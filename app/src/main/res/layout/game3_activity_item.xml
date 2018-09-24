@@ -105,7 +105,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/game_sslogo2"
+                android:src="@drawable/g0_seoul_logo"
                 android:padding="5dp"
                 android:layout_marginStart="50dp"
                 />

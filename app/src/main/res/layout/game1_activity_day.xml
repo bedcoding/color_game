@@ -28,7 +28,7 @@
 
             />
     </LinearLayout>
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2.5"
@@ -44,7 +44,7 @@
             android:textColor="#f86d06"
             android:fontFamily="sans-serif-condensed"
             />
-    </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
