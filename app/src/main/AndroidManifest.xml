@@ -11,11 +11,11 @@
         android:roundIcon="@drawable/appicon"
         android:supportsRtl="true"
         android:theme="@style/FullScreen">
-        <activity android:name=".NUM0_GameStart" />
-        <activity android:name=".NUM1_GameDay" />
-        <activity android:name=".NUM2_GameMain" />
-        <activity android:name=".NUM3_GameItem" />
-        <activity android:name=".NUM4_GameRun" />
+        <activity android:name=".Game0_Start" />
+        <activity android:name=".Game1_Day" />
+        <activity android:name=".Game2_Main" />
+        <activity android:name=".Game3_Item" />
+        <activity android:name=".Game4_Run" />
         <activity android:name=".Splash_Screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,16 +25,16 @@
         </activity>
 
         <activity
-            android:name=".NUM5_GameEndingVideo"
+            android:name=".Game5_EndingVideo"
             android:label="@string/title_activity_num5__ending_video"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity
-            android:name=".NUM5_GameDeadVideo"
+            android:name=".Game5_DeadVideo"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity
-            android:name=".NUM5_GameStartVideo"
+            android:name=".Game5_StartVideo"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
         </activity>

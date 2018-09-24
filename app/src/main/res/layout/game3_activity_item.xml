@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="io.jeux.ggavi.NUM3_GameItem"
+    tools:context="io.jeux.ggavi.Game3_Item"
     android:background="#E0FFFF"
     android:weightSum="3"
     >
@@ -20,7 +20,7 @@
             android:layout_height="55dp"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
-            android:background="@drawable/top_bar_back"
+            android:background="@drawable/game_top_bar_back"
             android:layout_gravity="center">
 
             <TextView
@@ -44,7 +44,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/diet"
+                android:src="@drawable/game_diet"
                 android:padding="5dp"
 
                 />
@@ -72,7 +72,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/water"
+                android:src="@drawable/game_water"
                 android:padding="5dp"
 
                 />
@@ -105,7 +105,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/sslogo2"
+                android:src="@drawable/game_sslogo2"
                 android:padding="5dp"
                 android:layout_marginStart="50dp"
                 />
@@ -154,7 +154,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:background="@drawable/top_bar_back"
+            android:background="@drawable/game_top_bar_back"
             android:gravity="center"
             android:text="루미의 아이템 창"
             android:textColor="#fabe29" />
@@ -177,7 +177,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/diet"
+                    android:src="@drawable/game_diet"
                     android:padding="5dp"
                     />
 
@@ -199,7 +199,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/firewall"
+                    android:src="@drawable/game_firewall"
                     />
 
                 <TextView
@@ -224,7 +224,7 @@
                 android:id="@+id/Family_One_Buy_Button_Id"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/button_back_press"
+                android:background="@drawable/game_button_back_press"
                 android:text="교환하기"
                 android:textAllCaps="false"
                 android:textColor="#fff"
@@ -244,7 +244,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:background="@drawable/top_bar_back"
+            android:background="@drawable/game_top_bar_back"
             android:gravity="center"
             android:text="레미의 아이템 창"
             android:textColor="#fabe29" />
@@ -266,7 +266,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/diet"
+                    android:src="@drawable/game_diet"
                     android:padding="5dp"
                     />
 
@@ -287,7 +287,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="30dp"
-                    android:src="@drawable/firewall"
+                    android:src="@drawable/game_firewall"
                     />
 
                 <TextView
@@ -313,7 +313,7 @@
                 android:id="@+id/Family_Two_Buy_Button_Id"
                 android:layout_width="100dp"
                 android:layout_height="match_parent"
-                android:background="@drawable/button_back_press"
+                android:background="@drawable/game_button_back_press"
                 android:text="교환하기"
                 android:textAllCaps="false"
                 android:textColor="#fff"

@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="io.jeux.ggavi.NUM0_GameStart"
-    android:background="@drawable/sp_back"
+    tools:context="io.jeux.ggavi.Game0_Start"
+    android:background="@drawable/game_no_use_sp_back"
     android:gravity="center"
     >
 
@@ -32,7 +32,7 @@
         <Button
             android:layout_width="150dp"
             android:layout_height="55dp"
-            android:background="@drawable/top_bar_back"
+            android:background="@drawable/game_top_bar_back"
             android:text="New Game"
             android:fontFamily="sans-serif-condensed"
             android:textColor="#fff"
@@ -44,7 +44,7 @@
         <Button
             android:layout_width="150dp"
             android:layout_height="55dp"
-            android:background="@drawable/top_bar_back"
+            android:background="@drawable/game_top_bar_back"
             android:text="Play Saved Game"
             android:fontFamily="sans-serif-condensed"
             android:textColor="#fff"

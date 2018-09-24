@@ -48,7 +48,7 @@
 
     </string-array>
     <integer-array name="Images_Data">
-        <item>@drawable/sslogo2</item>
+        <item>@drawable/game_sslogo2</item>
         <item>@drawable/d1gangnam</item>
         <item>@drawable/bufs</item>
         <item>@drawable/bufs</item>

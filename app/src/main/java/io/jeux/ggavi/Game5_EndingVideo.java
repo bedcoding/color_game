@@ -1,14 +1,13 @@
 package io.jeux.ggavi;
 
-import android.app.Activity;
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.app.Activity;
 import android.widget.Toast;
 import android.widget.VideoView;
 
-public class NUM5_GameDeadVideo extends Activity {
+public class Game5_EndingVideo extends Activity {
 
     // 뒤로가기 버튼 변수
     private BackPressCloseHandler backPressCloseHandler;
@@ -16,14 +15,13 @@ public class NUM5_GameDeadVideo extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.num5_activity_game_dead_video);
+        setContentView(R.layout.game5_activity_video_ending);
 
         backPressCloseHandler = new BackPressCloseHandler(this);  // 뒤로가기 버튼용 변수
-
         VideoView vv = (VideoView) findViewById(R.id.vv);
 
         // http://www ~~~ possible
-        String uriPath = "android.resource://" + getPackageName() + "/" + R.raw.bad;
+        String uriPath = "android.resource://" + getPackageName() + "/" + R.raw.game2good;
         Uri uri = Uri.parse(uriPath);
         vv.setVideoURI(uri);
         vv.requestFocus();
@@ -53,6 +51,8 @@ public class NUM5_GameDeadVideo extends Activity {
             }
         });
     }
+
+
 
 
 

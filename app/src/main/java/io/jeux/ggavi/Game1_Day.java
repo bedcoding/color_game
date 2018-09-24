@@ -12,13 +12,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-public class NUM1_GameDay extends AppCompatActivity {
+public class Game1_Day extends AppCompatActivity {
     private int Day = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.num1_activity_game_day);
+        setContentView(R.layout.game1_activity_day);
         // ActionBar Hide!
         Initiate_Diary();
     }
@@ -33,7 +33,7 @@ public class NUM1_GameDay extends AppCompatActivity {
         {
             Intent intent = new Intent(
                     getApplicationContext(),
-                    NUM5_GameStartVideo.class);  // game video
+                    Game5_StartVideo.class);  // game video
             startActivity(intent);            // move NUM5 screen
         }
 
@@ -99,11 +99,11 @@ public class NUM1_GameDay extends AppCompatActivity {
         Diary_Message_View.setText(Diary_Message[Day]);
 
 
-        Animation anim = AnimationUtils.loadAnimation(this, R.anim.logo_anim);
+        Animation anim = AnimationUtils.loadAnimation(this, R.anim.game_logo_anim);
         Day_No_View.clearAnimation();
         Day_No_View.setAnimation(anim);
 
-        Animation anim_1 = AnimationUtils.loadAnimation(this, R.anim.text_anim);
+        Animation anim_1 = AnimationUtils.loadAnimation(this, R.anim.game_text_anim);
         Diary_Message_View.clearAnimation();
         Diary_Message_View.setAnimation(anim_1);
 
@@ -119,7 +119,7 @@ public class NUM1_GameDay extends AppCompatActivity {
             {
                 if(Day < 30)  // 엔딩 날짜가 아닌 경우
                 {
-                    Intent Launch_Activity = new Intent(NUM1_GameDay.this, NUM2_GameMain.class);
+                    Intent Launch_Activity = new Intent(Game1_Day.this, Game2_Main.class);
                     startActivity(Launch_Activity);
                     finish();
                 }
@@ -128,7 +128,7 @@ public class NUM1_GameDay extends AppCompatActivity {
                 {
                     Intent intent = new Intent(
                             getApplicationContext(),
-                            NUM5_GameEndingVideo.class);  // game ending
+                            Game5_EndingVideo.class);  // game ending
                     finish();                         // end NUM1 screen
                     startActivity(intent);            // move NUM5 screen
                 }

@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import java.util.Random;
 
-public class NUM2_GameMain extends AppCompatActivity {
+public class Game2_Main extends AppCompatActivity {
 
     private Boolean Die = false;
 
@@ -31,8 +31,8 @@ public class NUM2_GameMain extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.num2_activity_game_main);
-        New_Alert_Dialog = new AlertDialog.Builder(NUM2_GameMain.this);
+        setContentView(R.layout.game2_activity_main);
+        New_Alert_Dialog = new AlertDialog.Builder(Game2_Main.this);
         Data_Box = getApplicationContext().getSharedPreferences("Data_Box", MODE_PRIVATE);
         Getting_Data();
     }
@@ -103,7 +103,7 @@ public class NUM2_GameMain extends AppCompatActivity {
         Get_Item_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(NUM2_GameMain.this, NUM3_GameItem.class));
+                startActivity(new Intent(Game2_Main.this, Game3_Item.class));
                 finish();
 
             }
@@ -112,7 +112,7 @@ public class NUM2_GameMain extends AppCompatActivity {
         Running_Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(NUM2_GameMain.this, NUM4_GameRun.class));
+                startActivity(new Intent(Game2_Main.this, Game4_Run.class));
                 finish();
             }
         });
@@ -342,7 +342,7 @@ public class NUM2_GameMain extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 Intent intent = new Intent(
                         getApplicationContext(),
-                        NUM5_GameDeadVideo.class);  // game ending
+                        Game5_DeadVideo.class);  // game ending
                 finish();                         // end NUM1 screen
                 startActivity(intent);            // move NUM5 screen
             }

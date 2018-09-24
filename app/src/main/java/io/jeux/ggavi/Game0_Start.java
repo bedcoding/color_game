@@ -8,13 +8,13 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class NUM0_GameStart extends AppCompatActivity {
+public class Game0_Start extends AppCompatActivity {
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.num0_activity_game_start);
+        setContentView(R.layout.game0_activity_start);
         Buttons_Working();
     }
 
@@ -50,7 +50,7 @@ public class NUM0_GameStart extends AppCompatActivity {
 
                 Editor.commit();
                 editor.commit();
-                Intent Launch_Activity=new Intent(NUM0_GameStart.this,NUM1_GameDay.class);
+                Intent Launch_Activity=new Intent(Game0_Start.this,Game1_Day.class);
                 startActivity(Launch_Activity);
             }
         });
@@ -60,7 +60,7 @@ public class NUM0_GameStart extends AppCompatActivity {
             public void onClick(View v)
             {
 
-                Intent Launch_Activity=new Intent(NUM0_GameStart.this,NUM1_GameDay.class);
+                Intent Launch_Activity=new Intent(Game0_Start.this,Game1_Day.class);
                 startActivity(Launch_Activity);
             }
         });

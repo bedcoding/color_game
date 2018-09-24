@@ -22,7 +22,7 @@ Splash_Screen extends AppCompatActivity {
         progressBar = findViewById(R.id.Progress_Bar_View_Id);
         progressBar.setVisibility(View.VISIBLE);
         progressBar.getIndeterminateDrawable().setColorFilter(new LightingColorFilter(0xFF000000, getResources().getColor(R.color.colorBlack)));
-        Animation anim = AnimationUtils.loadAnimation(this, R.anim.logo_anim);
+        Animation anim = AnimationUtils.loadAnimation(this, R.anim.game_logo_anim);
         Logo_View.clearAnimation();
         Logo_View.setAnimation(anim);
         Splash_Control();
@@ -43,7 +43,7 @@ Splash_Screen extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                startActivity(new Intent(Splash_Screen.this,NUM0_GameStart.class));
+                startActivity(new Intent(Splash_Screen.this,Game0_Start.class));
              finish();}});
         Control_Splash.start();
     }

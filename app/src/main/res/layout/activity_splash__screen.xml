@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Splash_Screen"
     android:orientation="vertical"
-    android:background="@drawable/sp_back"
+    android:background="@drawable/game_no_use_sp_back"
     >
 
 

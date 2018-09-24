@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="io.jeux.ggavi.NUM4_GameRun"
+    tools:context="io.jeux.ggavi.Game4_Run"
     android:background="#333"
     android:orientation="vertical"
     android:weightSum="3.5"
@@ -21,7 +21,7 @@
         android:layout_height="55dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
-        android:background="@drawable/top_bar_back"
+        android:background="@drawable/game_top_bar_back"
         android:layout_gravity="center">
 
         <TextView
@@ -66,7 +66,7 @@
                     <ImageView
                         android:layout_width="35dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/clock"
+                        android:src="@drawable/game_clock"
                         android:padding="5dp"
                         />
                     <TextView
@@ -97,7 +97,7 @@
                     <ImageView
                         android:layout_width="35dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/person_walking"
+                        android:src="@drawable/game_person_walking"
                         android:padding="5dp"
                         />
                     <TextView
@@ -138,7 +138,7 @@
                     <ImageView
                         android:layout_width="35dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/hunger"
+                        android:src="@drawable/game_hunger"
                         android:padding="5dp"
                         />
 
@@ -170,7 +170,7 @@
                     <ImageView
                         android:layout_width="35dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/thirst"
+                        android:src="@drawable/game_thirst"
                         android:padding="5dp"
                         />
 
@@ -202,7 +202,7 @@
             android:layout_width="160dp"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/button_back_press"
+            android:background="@drawable/game_button_back_press"
             android:text="(테스트용 버튼)"
             android:textAllCaps="false"
             android:textColor="#fff"
@@ -225,7 +225,7 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_marginTop="10dp"
-            android:src="@drawable/sslogo2"
+            android:src="@drawable/game_sslogo2"
             android:id="@+id/WalkImage_View_Id"
             />
 
@@ -252,7 +252,7 @@
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:text="Stop walking"
-            android:background="@drawable/top_bar_back"
+            android:background="@drawable/game_top_bar_back"
             android:textColor="#fabe29"
             />
     </LinearLayout>

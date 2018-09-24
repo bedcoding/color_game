@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="io.jeux.ggavi.NUM3_GameItem"
+    tools:context="io.jeux.ggavi.Game3_Item"
     android:background="#333333"
     android:weightSum="5"
     >
@@ -22,7 +22,7 @@
             android:textSize="30sp"
             android:text="Day 1"
             android:gravity="center"
-            android:background="@drawable/sslogo"
+            android:background="@drawable/game_sslogo"
             android:paddingBottom="5dp"
             android:paddingStart="5dp"
 
@@ -57,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Next >"
-            android:background="@drawable/button_back_rect"
+            android:background="@drawable/game_button_back_rect"
             android:textColor="#fff"
             android:textSize="25sp"
             android:fontFamily="sans-serif-condensed"

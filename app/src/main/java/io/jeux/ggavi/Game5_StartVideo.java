@@ -3,23 +3,22 @@ package io.jeux.ggavi;
 import android.app.Activity;
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import android.widget.VideoView;
 
-public class NUM5_GameStartVideo extends Activity {
+public class Game5_StartVideo extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.num5_activity_game_start_video);
+        setContentView(R.layout.game5_activity_video_start);
         VideoView vv = (VideoView) findViewById(R.id.vv);
 
         // http://www ~~~ possible
-        String uriPath = "android.resource://" + getPackageName() + "/" + R.raw.startvideo;
+        String uriPath = "android.resource://" + getPackageName() + "/" + R.raw.game3start;
         Uri uri = Uri.parse(uriPath);
         vv.setVideoURI(uri);
         vv.requestFocus();

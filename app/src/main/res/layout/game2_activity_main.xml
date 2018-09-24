@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="io.jeux.ggavi.NUM2_GameMain"
+    tools:context="io.jeux.ggavi.Game2_Main"
     android:background="#E0FFFF"
     android:weightSum="4"
     >
@@ -21,7 +21,7 @@
         android:layout_height="55dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
-        android:background="@drawable/top_bar_back"
+        android:background="@drawable/game_top_bar_back"
         android:layout_gravity="center">
 
         <TextView
@@ -44,7 +44,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/diet"
+            android:src="@drawable/game_diet"
             android:padding="5dp"
 
             />
@@ -72,7 +72,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@drawable/water"
+            android:src="@drawable/game_water"
             android:padding="5dp"
 
             />
@@ -105,7 +105,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:src="@drawable/sslogo2"
+            android:src="@drawable/game_sslogo2"
             android:padding="5dp"
             android:layout_marginStart="50dp"
             />
@@ -155,7 +155,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:background="@drawable/top_bar_back"
+            android:background="@drawable/game_top_bar_back"
             android:gravity="center"
             android:text="루미의 아이템 창"
             android:textColor="#fabe29" />
@@ -185,7 +185,7 @@
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/damage"
+                android:src="@drawable/game_damage"
                 android:padding="5dp"
                 />
 
@@ -218,7 +218,7 @@
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/hunger"
+                android:src="@drawable/game_hunger"
                 android:padding="5dp"
                 />
 
@@ -260,7 +260,7 @@
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/hp"
+                android:src="@drawable/game_hp"
                 android:padding="5dp"
                 />
             <TextView
@@ -294,7 +294,7 @@
             <ImageView
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
-                android:src="@drawable/thirst"
+                android:src="@drawable/game_thirst"
                 android:padding="5dp"
                 />
 
@@ -337,7 +337,7 @@
                 <Button
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
-                    android:background="@drawable/button_back_press"
+                    android:background="@drawable/game_button_back_press"
                     android:text="Food"
                     android:textColor="#fff"
                     android:textAllCaps="false"
@@ -354,7 +354,7 @@
                 <Button
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
-                    android:background="@drawable/button_back_press"
+                    android:background="@drawable/game_button_back_press"
                     android:text="Water"
                     android:textColor="#fff"
                     android:textAllCaps="false"
@@ -379,7 +379,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:background="@drawable/top_bar_back"
+            android:background="@drawable/game_top_bar_back"
             android:gravity="center"
             android:text="레미의 아이템 창"
             android:textColor="#fabe29" />
@@ -408,7 +408,7 @@
                     <ImageView
                         android:layout_width="35dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/damage"
+                        android:src="@drawable/game_damage"
                         android:padding="5dp"
                         />
 
@@ -439,7 +439,7 @@
                     <ImageView
                         android:layout_width="35dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/hunger"
+                        android:src="@drawable/game_hunger"
                         android:padding="5dp"
                         />
 
@@ -479,7 +479,7 @@
                     <ImageView
                         android:layout_width="35dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/hp"
+                        android:src="@drawable/game_hp"
                         android:padding="5dp"
                         />
                     <TextView
@@ -510,7 +510,7 @@
                     <ImageView
                         android:layout_width="35dp"
                         android:layout_height="match_parent"
-                        android:src="@drawable/thirst"
+                        android:src="@drawable/game_thirst"
                         android:padding="5dp"
                         />
                     <TextView
@@ -548,7 +548,7 @@
                 <Button
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
-                    android:background="@drawable/button_back_press"
+                    android:background="@drawable/game_button_back_press"
                     android:text="Food"
                     android:textColor="#fff"
                     android:textAllCaps="false"
@@ -565,7 +565,7 @@
                 <Button
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
-                    android:background="@drawable/button_back_press"
+                    android:background="@drawable/game_button_back_press"
                     android:text="Water"
                     android:textColor="#fff"
                     android:textAllCaps="false"
@@ -588,7 +588,7 @@
             android:layout_height="40dp"
             android:text="아이템 제작"
             android:textAllCaps="false"
-            android:background="@drawable/top_bar_back"
+            android:background="@drawable/game_top_bar_back"
             android:fontFamily="sans-serif-condensed"
             android:textColor="#fff"
             android:textSize="20dp"
@@ -600,7 +600,7 @@
             android:layout_height="40dp"
             android:text="걷기 시작"
             android:textAllCaps="false"
-            android:background="@drawable/top_bar_back"
+            android:background="@drawable/game_top_bar_back"
             android:fontFamily="sans-serif-condensed"
             android:textColor="#fff"
             android:textSize="20dp"

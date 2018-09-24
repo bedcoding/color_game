@@ -1,6 +1,5 @@
 package io.jeux.ggavi;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -18,12 +17,11 @@ import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Random;
 
 
-public class NUM4_GameRun extends AppCompatActivity implements SensorEventListener {
+public class Game4_Run extends AppCompatActivity implements SensorEventListener {
 
     //private BackPressCloseHandler backPressCloseHandler;  // 뒤로가기 버튼용 변수
     private int Collected_Food, Collected_Water;
@@ -55,7 +53,7 @@ public class NUM4_GameRun extends AppCompatActivity implements SensorEventListen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.num4_activity_game_run);
+        setContentView(R.layout.game4_activity_run);
 
         //backPressCloseHandler = new BackPressCloseHandler(this);  // 뒤로가기 버튼용 변수
 
@@ -208,7 +206,7 @@ public class NUM4_GameRun extends AppCompatActivity implements SensorEventListen
                 editor.commit();
 
                 // 화면 전환
-                startActivity(new Intent(NUM4_GameRun.this, NUM1_GameDay.class));
+                startActivity(new Intent(Game4_Run.this, Game1_Day.class));
                 finish();
             }
         });
@@ -251,7 +249,7 @@ public class NUM4_GameRun extends AppCompatActivity implements SensorEventListen
     @Override
     public void onBackPressed() {
         //  super.onBackPressed();
-        startActivity(new Intent(NUM4_GameRun.this, NUM2_GameMain.class));
+        startActivity(new Intent(Game4_Run.this, Game2_Main.class));
         finish();
     }
 */
@@ -300,7 +298,7 @@ public class NUM4_GameRun extends AppCompatActivity implements SensorEventListen
                 return;
             }
             if (System.currentTimeMillis() <= backKeyPressedTime + 1000) {
-                startActivity(new Intent(NUM4_GameRun.this, NUM2_GameMain.class));
+                startActivity(new Intent(Game4_Run.this, Game2_Main.class));
                 finish();
                 toast.cancel();
             }
