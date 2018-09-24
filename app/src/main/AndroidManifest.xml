@@ -26,7 +26,6 @@
 
         <activity
             android:name=".Game5_EndingVideo"
-            android:label="@string/title_activity_num5__ending_video"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity

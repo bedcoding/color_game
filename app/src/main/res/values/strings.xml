@@ -39,10 +39,17 @@
             \n\n헤이그밀사인 이준열사와 초대부통령이신 이시영선생의 묘소, 조국을 위해 꽃다운 청춘을 바친 17위의 광복군합동묘소 등 모두 12기의 독립유공자 묘역이 조성되어 있다.
             \n\n민주주의를 위해 희생하신 분들이 잠들어 계신 4.19민주묘지가 있는 곳이기도 하다.
             \n\n순례길의 무장애 탐방구간은 비교적 평탄한 구간으로 조성되어 있으나 보호자 동행이 반드시 필요한 구간으로 자연친화적 다리인 섶다리와 계곡쉼터가 있어 역사와 자연이 어우러진 구간이다.
-    </item>
+        </item>
 
-        <item> 8.  </item>
-        <item> 9.  </item>
+        <item> 8. 북한산둘레길 03코스 흰구름길: 산과 도시가 어우러진 수려한 조망을 원하는 분들에게 추천하는 코스이다.
+            \n\n화계사를 지나 나타나는 구름전망대에 오르면 마치 구름위에 올라 아래를 내려다보듯 북한산과 서울시내 전경이 파노라마처럼 펼쳐진다.
+            \n\n구름전망대는 12미터에 달하는 높이에 덮개가 없어 360도 전방위 조망이 가능하다.
+        </item>
+
+        <item>
+            9. 북한산둘레길 04코스 솔샘길: 소나무와 맑은 샘이 있다는 뜻을 가진 솔샘길은 예쁜 이름처럼 아이들과 잘 어울리는 길이다.
+        </item>
+
         <item> 10.  </item>
         <item> 11.  </item>
         <item> 12.  </item>
@@ -78,8 +85,8 @@
         <item>@drawable/g5_gangbook1</item>
         <item>@drawable/g6_gangbook2</item>
         <item>@drawable/g7_gangbook3</item>
-        <item>@drawable/bufs</item>
-        <item>@drawable/bufs</item>
+        <item>@drawable/g8_gangbook4</item>
+        <item>@drawable/g9_gangbook5</item>
         <item>@drawable/bufs</item>
         <item>@drawable/bufs</item>
         <item>@drawable/bufs</item>
@@ -114,8 +121,8 @@
         <item> 5. 숲길 위주로 특별한 자원은 없지만 걷기에는 좋다. 안내체계는 전체적으로 잘 되어 있어 길을 잃을 걱정이 전혀없다. 종착점인 솔밭공원은 우이동의 명물로 우거진 솔숲을 걷는 맛이 상쾌하다. </item>
         <item> 6. 4.19묘지가 전망대에서 보인다. 약간 능선길이지만 위험요소는 없다. 교통이용은 큰 불편함은 없지만 통일원으로 들어오는 마을버스를 이용해야 한다. </item>
         <item> 7. 계곡과 숲이 어우러진 멋진 길이다. 특히 섶다리를 건너는 구간이 재미있다. 여름철에는 계곡에 발을 담글 수 있다. </item>
-        <item> 8.  </item>
-        <item> 9.  </item>
+        <item> 8. 구름전망대는 북한산둘레길 중에서 가장 조망이 곳이다. 북한산, 도봉산, 서울 시내 등이 한눈에 펼쳐진다. 고찰 화개사의 문화유산도 큰 볼거리다. </item>
+        <item> 9. 3개의 능선을 오르내리는 다소 힘든 구간이지만, 잘 가꾼 북한산생태숲에서 자연을 만끽할 수 있다. </item>
         <item> 10.  </item>
         <item> 11.  </item>
         <item> 12.  </item>
@@ -140,6 +147,8 @@
         <!-- Add 100 Image Description  Here -->
 
     </string-array>
+<!--
     <string name="title_activity_num5__ending_video">NUM5_EndingVideo</string>
+-->
 
 </resources>

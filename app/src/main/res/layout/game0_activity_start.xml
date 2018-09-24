@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="io.jeux.ggavi.Game0_Start"
-    android:background="@drawable/game_no_use_sp_back"
+    android:background="#E0FFFF"
     android:gravity="center"
     >
 
@@ -18,7 +18,7 @@
         <ImageView
             android:layout_width="120dp"
             android:layout_height="120dp"
-            android:src="@drawable/walk_away_logo"
+            android:src="@drawable/g0_seoul_logo"
             />
 
     </LinearLayout>
@@ -33,7 +33,7 @@
             android:layout_width="150dp"
             android:layout_height="55dp"
             android:background="@drawable/game_top_bar_back"
-            android:text="New Game"
+            android:text="새로시작"
             android:fontFamily="sans-serif-condensed"
             android:textColor="#fff"
             android:textAllCaps="false"
@@ -45,7 +45,7 @@
             android:layout_width="150dp"
             android:layout_height="55dp"
             android:background="@drawable/game_top_bar_back"
-            android:text="Play Saved Game"
+            android:text="불러오기"
             android:fontFamily="sans-serif-condensed"
             android:textColor="#fff"
             android:textAllCaps="false"

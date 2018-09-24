@@ -19,7 +19,7 @@
             android:layout_width="175dp"
             android:layout_height="175dp"
             android:textColor="#333333"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:text="Day 1"
             android:gravity="center"
             android:background="@drawable/game_sslogo"
